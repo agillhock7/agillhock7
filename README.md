@@ -41,19 +41,6 @@
 
 ### Stats (numbers that look impressive if you don't ask follow-up questions)
 
-<!-- Stats: switched to a more reliable GitHub Readme Stats mirror + added caching -->
-<p align="center">
-  <img
-    height="165"
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&ring_color=22c55e&text_color=cbd5e1&cache_seconds=21600"
-    alt="GitHub stats"
-  />
-  <img
-    height="165"
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1&cache_seconds=21600"
-    alt="Top languages"
-  />
-</p>
 
 <p align="center">
   <img
