@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://AlexanderJGill.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img
       src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF"
       alt="Header"
