@@ -19,6 +19,7 @@
 
 ## About
 - Full-stack developer focused on clean, reliable web products.
+- Previously built, tested, and ran aerospace propulsion systems; now I bring that same systems rigor into software.
 - Strong in modern UI work with `Vue`, `Vite`, `TypeScript`, and `JavaScript`.
 - Comfortable building backend features with `PHP`, `WordPress`, `MySQL`, and `PostgreSQL`.
 - Linux-first workflow with Git-based delivery.
