@@ -33,13 +33,8 @@
   <img src="https://img.shields.io/badge/Docker-22c55e?style=flat&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
-<p align="center">
-  <i>Green accents, dark vibes. Definitely not a cult. Probably.</i>
-</p>
 
 ---
-
-### Stats (numbers that look impressive if you don't ask follow-up questions)
 
 
 <p align="center">
@@ -49,12 +44,4 @@
   />
 </p>
 
----
 
-### What I'm building (so I don't build character)
-- **Problem Solver**: project management + hosting + automation
-- **OnLedge**: receipt capture, organization, reporting
-- **EveryMile**: mileage tracking with real-world value
-
-### Links (for the brave)
-- Website: https://gops.app
