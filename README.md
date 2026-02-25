@@ -8,9 +8,11 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=agillhock7&label=Profile%20Views&color=22c55e&style=flat" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/agillhock7?label=Followers&style=flat&color=22c55e&labelColor=0b1220" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/agillhock7?label=Stars&style=flat&color=22c55e&labelColor=0b1220" alt="Stars" />
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
+    <img src="https://komarev.com/ghpvc/?username=agillhock7&label=Profile%20Views&color=22c55e&style=flat" alt="Profile views" />
+    <img src="https://img.shields.io/github/followers/agillhock7?label=Followers&style=flat&color=22c55e&labelColor=0b1220" alt="Followers" />
+    <img src="https://img.shields.io/github/stars/agillhock7?label=Stars&style=flat&color=22c55e&labelColor=0b1220" alt="Stars" />
+  </a>
 </p>
 
 <p align="center">
@@ -26,18 +28,20 @@
 
 ## Tech Stack
 <p>
-  <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-22c55e?style=flat&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" />
-  <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" />
-  <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-22c55e?style=flat&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ubuntu-22c55e?style=flat&logo=ubuntu&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/Codex-22c55e?style=flat&logo=openai&logoColor=white" />
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
+    <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vite-22c55e?style=flat&logo=vite&logoColor=white" />
+    <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" />
+    <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/PostgreSQL-22c55e?style=flat&logo=postgresql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" />
+    <img src="https://img.shields.io/badge/Ubuntu-22c55e?style=flat&logo=ubuntu&logoColor=white" />
+    <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" />
+    <img src="https://img.shields.io/badge/Codex-22c55e?style=flat&logo=openai&logoColor=white" />
+  </a>
 </p>
 
 ## Current Focus
