@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF&stroke=0b1220&strokeWidth=2"
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF"
     alt="Header"
   />
 </p>
@@ -64,4 +64,8 @@
 
 <p align="center">
   <img src="assets/activity-graph.svg" alt="Activity graph" />
+</p>
+
+<p align="center">
+  <img src="assets/contribution-calendar.svg" alt="Contribution calendar" />
 </p>
