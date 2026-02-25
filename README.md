@@ -1,27 +1,28 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF&stroke=0b1220&strokeWidth=2"
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Full-Stack%20Web%20Developer&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF&stroke=0b1220&strokeWidth=2"
     alt="Header"
   />
 </p>
 
 <p align="center">
-  <img
-    src="https://komarev.com/ghpvc/?username=agillhock7&label=Profile%20Views&color=22c55e&style=flat"
-    alt="Profile views"
-  />
-  <img
-    src="https://img.shields.io/github/followers/agillhock7?label=Followers&style=flat&color=22c55e&labelColor=0b1220"
-    alt="Followers"
-  />
-  <img
-    src="https://img.shields.io/github/stars/agillhock7?label=Stars&style=flat&color=22c55e&labelColor=0b1220"
-    alt="Stars"
-  />
+  <img src="https://komarev.com/ghpvc/?username=agillhock7&label=Profile%20Views&color=22c55e&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/agillhock7?label=Followers&style=flat&color=22c55e&labelColor=0b1220" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/agillhock7?label=Stars&style=flat&color=22c55e&labelColor=0b1220" alt="Stars" />
 </p>
 
-<!-- Skills: switched to Shields badges for reliability (skillicons sometimes fails on GitHub) -->
 <p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=22C55E&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+always+shipping" alt="Typing intro" />
+</p>
+
+## About
+- Full-stack developer focused on clean, reliable web products.
+- Strong in modern UI work with `Vue`, `Vite`, `TypeScript`, and `JavaScript`.
+- Comfortable building backend features with `PHP`, `WordPress`, `MySQL`, and `PostgreSQL`.
+- Linux-first workflow with Git-based delivery.
+
+## Tech Stack
+<p>
   <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-22c55e?style=flat&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" />
@@ -36,15 +37,31 @@
   <img src="https://img.shields.io/badge/Codex-22c55e?style=flat&logo=openai&logoColor=white" />
 </p>
 
+## Current Focus
+- Building fast, maintainable front ends.
+- Improving API and database design discipline.
+- Shipping features consistently with tighter DevOps habits.
 
----
+## Featured Projects
+| Project | Summary |
+| --- | --- |
+| [OnLedge](https://github.com/agillhock7/OnLedge) | Snap receipts, stay organized, and see where your money goes. |
+| [EveryMile](https://github.com/agillhock7/EveryMile) | Track movement, true operating cost, and deduction value in one defensible stream. |
+| [MySite](https://github.com/agillhock7/MySite) | A beginning look at personalized UI with AI. |
+| [Slapshot-Snapshot](https://github.com/agillhock7/Slapshot-Snapshot) | Team photos and videos. |
+| [parcel-tracker](https://github.com/agillhock7/parcel-tracker) | Secure shipment tracking across desktop and mobile. |
+| [feedabum](https://github.com/agillhock7/feedabum) | Hyperlocal micro-giving for verified neighbors; scan, verify, and donate in under a minute. |
 
-
+## GitHub Snapshot
 <p align="center">
-  <img
-    src="https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e"
-    alt="Streak stats"
-  />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&text_color=cbd5e1" alt="GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1" alt="Top languages" />
 </p>
 
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" alt="Streak stats" />
+</p>
 
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0d1117&color=8ccfaf&line=22c55e&point=8ccfaf&area=true&hide_border=true" alt="Activity graph" />
+</p>
