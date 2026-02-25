@@ -20,11 +20,17 @@
   />
 </p>
 
+<!-- Skills: switched to Shields badges for reliability (skillicons sometimes fails on GitHub) -->
 <p align="center">
-  <img
-    src="https://skillicons.dev/icons?i=js,ts,vue,php,python,nodejs,linux,git,docker&perline=9"
-    alt="Skills"
-  />
+  <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" alt="Vue" />
+  <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" alt="WordPress" />
+  <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" alt="Linux" />
+  <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Docker-22c55e?style=flat&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
 <p align="center">
@@ -34,15 +40,17 @@
 ---
 
 ### Stats (numbers that look impressive if you don't ask follow-up questions)
+
+<!-- Stats: switched to a more reliable GitHub Readme Stats mirror + added caching -->
 <p align="center">
   <img
     height="165"
-    src="https://github-readme-stats.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&icon_color=22c55e&ring_color=22c55e&title_color=22c55e&text_color=cbd5e1"
+    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&ring_color=22c55e&text_color=cbd5e1&cache_seconds=21600"
     alt="GitHub stats"
   />
   <img
     height="165"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1"
+    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1&cache_seconds=21600"
     alt="Top languages"
   />
 </p>
