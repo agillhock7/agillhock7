@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Shipping%20apps%20until%20the%20bugs%20develop%20sentience&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF"
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Shipping%20apps%20like%20a%20machine%20&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF"
     alt="Header"
   />
 </p>
