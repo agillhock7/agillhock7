@@ -22,15 +22,21 @@
 
 <!-- Skills: switched to Shields badges for reliability (skillicons sometimes fails on GitHub) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" alt="Vue" />
-  <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" alt="WordPress" />
-  <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" alt="Linux" />
-  <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Docker-22c55e?style=flat&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-22c55e?style=flat&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-22c55e?style=flat&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ubuntu-22c55e?style=flat&logo=ubuntu&logoColor=white" />
+  <img src="https://img.shields.io/badge/WSL-22c55e?style=flat&logo=windows&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS_Code-22c55e?style=flat&logo=visualstudiocode&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Codex-22c55e?style=flat&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCP-22c55e?style=flat&labelColor=0b1220" />
 </p>
 
 
