@@ -1,0 +1,31 @@
+name: Update Profile Cards
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 7 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure assets directory
+        run: mkdir -p assets
+
+      - name: Download cards
+        run: |
+          curl -fsSL "https://github-readme-stats.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&text_color=cbd5e1" -o assets/github-stats.svg
+          curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1" -o assets/top-langs.svg
+          curl -fsSL "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" -o assets/streak.svg
+
+      - name: Commit updated cards
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "assets/*.svg"
+          message: "chore: update profile cards"
+          default_author: github_actions
