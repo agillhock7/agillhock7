@@ -19,9 +19,10 @@ jobs:
 
       - name: Download cards
         run: |
-          curl -fsSL "https://github-readme-stats.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&text_color=cbd5e1" -o assets/github-stats.svg
-          curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1" -o assets/top-langs.svg
-          curl -fsSL "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" -o assets/streak.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=agillhock7&theme=github_dark" -o assets/github-stats.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=agillhock7&theme=github_dark" -o assets/top-langs.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" -o assets/streak.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0d1117&color=8ccfaf&line=22c55e&point=8ccfaf&area=true&hide_border=true" -o assets/activity-graph.svg
 
       - name: Commit updated cards
         uses: EndBug/add-and-commit@v9

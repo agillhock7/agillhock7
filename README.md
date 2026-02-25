@@ -54,14 +54,14 @@
 
 ## GitHub Snapshot
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=agillhock7&show_icons=true&hide_border=true&theme=tokyonight&title_color=22c55e&icon_color=22c55e&text_color=cbd5e1" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=agillhock7&layout=compact&hide_border=true&theme=tokyonight&title_color=22c55e&text_color=cbd5e1" alt="Top languages" />
+  <img height="170" src="assets/github-stats.svg" alt="GitHub stats" />
+  <img height="170" src="assets/top-langs.svg" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" alt="Streak stats" />
+  <img src="assets/streak.svg" alt="Streak stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0d1117&color=8ccfaf&line=22c55e&point=8ccfaf&area=true&hide_border=true" alt="Activity graph" />
+  <img src="assets/activity-graph.svg" alt="Activity graph" />
 </p>
