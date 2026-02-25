@@ -70,18 +70,5 @@
 </p>
 
 <p align="center">
-  <img src="assets/contribution-calendar.svg" alt="Contribution calendar" />
-</p>
-
-## Contribution Snake
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/agillhock7/agillhock7/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/agillhock7/agillhock7/output/github-contribution-grid-snake.svg" />
-    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/agillhock7/agillhock7/output/github-contribution-grid-snake.svg" />
-  </picture>
-</p>
-
-<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&animation=twinkling&color=0:171F1F,100:8CCAAF" alt="Footer wave" />
 </p>
