@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF"
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF&stroke=0b1220&strokeWidth=2"
     alt="Header"
   />
 </p>
