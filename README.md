@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=22C55E&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+always+shipping" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=22C55E&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
 </p>
 
 ## About
@@ -47,7 +47,7 @@
 ## Current Focus
 - Building fast, maintainable front ends.
 - Improving API and database design discipline.
-- Shipping features consistently with tighter DevOps habits.
+- Making steady progress with tighter DevOps habits.
 
 ## Featured Projects
 | Project | Summary |
