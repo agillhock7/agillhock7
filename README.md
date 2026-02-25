@@ -1,7 +1,7 @@
 <!-- agillhock7 GitHub Profile README -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=agillhock7&fontAlignY=35&desc=Building%20apps%20because%20I%20Can&descAlignY=55&animation=twinkling" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander Gill&fontAlignY=35&desc=Building%20Apps%20Because%20I%20Can&descAlignY=55&animation=twinkling" />
 </p>
 
 <p align="center">
