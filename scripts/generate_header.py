@@ -156,9 +156,20 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
     </filter>
   </defs>
 
-  <rect width="{width}" height="{height}" fill="url(#bgGrad)" />
-  <g transform="translate(0,220) scale(1.40515,-1.40515)">
-    <path d="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z" fill="#8CCAAF" opacity="0.26" >
+  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" />
+  <path d="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z" fill="#8CCAAF" opacity="0.18" >
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      keyTimes="0;0.333;0.667;1"
+      calcMode="spline"
+      keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
+      begin="-10s"
+      values="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z;M0 0 L0 165 Q300 172 600 155 T1200 140 L1200 0 Z;M0 0 L0 185 Q300 137 600 185 T1200 140 L1200 0 Z;M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z">
+    </animate>
+  </path>
+  <path d="M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z" fill="#171F1F" opacity="0.22" >
       <animate
         attributeName="d"
         dur="20s"
@@ -167,22 +178,9 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
         calcMode="spline"
         keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
         begin="0s"
-        values="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z;M0 0L 0 85Q 213.5 100 427 80T 854 70L 854 0 Z;M0 0L 0 105Q 213.5 75 427 105T 854 70L 854 0 Z;M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z">
+        values="M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z;M0 0 L0 168 Q300 127 600 127 T1200 154 L1200 0 Z;M0 0 L0 160 Q300 133 600 170 T1200 189 L1200 0 Z;M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z">
       </animate>
     </path>
-    <path d="M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z" fill="#171F1F" opacity="0.34" >
-      <animate
-        attributeName="d"
-        dur="20s"
-        repeatCount="indefinite"
-        keyTimes="0;0.333;0.667;1"
-        calcMode="spline"
-        keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-        begin="-10s"
-        values="M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z;M0 0L 0 90Q 213.5 60 427 60T 854 80L 854 0 Z;M0 0L 0 85Q 213.5 65 427 90T 854 105L 854 0 Z;M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z">
-      </animate>
-    </path>
-  </g>
 
   <g filter="url(#softGlow)">
     <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{name}</text>
