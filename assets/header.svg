@@ -15,8 +15,10 @@
   </defs>
 
   <rect width="1200" height="220" fill="url(#bgGrad)" />
-  <path d="M0 220 L0 126 Q300 63 600 110 T1200 71 L1200 220 Z" fill="url(#bgGrad)" opacity="0.4" />
-  <path d="M0 220 L0 102 Q300 31 600 79 T1200 63 L1200 220 Z" fill="url(#bgGrad)" opacity="0.4" />
+  <g transform="translate(0,220) scale(1.40515,-1.40515)">
+    <path d="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z" fill="url(#bgGrad)" opacity="0.4" />
+    <path d="M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z" fill="url(#bgGrad)" opacity="0.4" />
+  </g>
 
   <g filter="url(#softGlow)">
     <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Alexander Gill</text>
