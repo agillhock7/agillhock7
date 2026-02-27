@@ -22,21 +22,42 @@
 ## About
 - Full-stack developer focused on clean, reliable web products.
 - Previously built, tested, and ran aerospace propulsion systems; now I bring that same systems rigor into software.
+- USA Hockey coach focused on player development, fundamentals, and team culture.
+- Proud dad; family keeps me grounded and moving with purpose.
 - Strong in modern UI work with `Vue`, `Vite`, `TypeScript`, and `JavaScript`.
 - Comfortable building backend features with `PHP`, `WordPress`, `MySQL`, and `PostgreSQL`.
 - Linux-first workflow with Git-based delivery.
 
 ## Tech Stack
+<p><strong>Frontend</strong></p>
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/Vue-1e3a8a?style=flat&logo=vuedotjs&logoColor=white" />
     <img src="https://img.shields.io/badge/Vite-1d4ed8?style=flat&logo=vite&logoColor=white" />
     <img src="https://img.shields.io/badge/TypeScript-2563eb?style=flat&logo=typescript&logoColor=white" />
     <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=flat&logo=javascript&logoColor=white" />
+  </a>
+</p>
+
+<p><strong>Backend</strong></p>
+<p>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/PHP-1e40af?style=flat&logo=php&logoColor=white" />
     <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=flat&logo=wordpress&logoColor=white" />
+  </a>
+</p>
+
+<p><strong>Data</strong></p>
+<p>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/MySQL-0284c7?style=flat&logo=mysql&logoColor=white" />
     <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=flat&logo=postgresql&logoColor=white" />
+  </a>
+</p>
+
+<p><strong>Platform and Tools</strong></p>
+<p>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/Linux-1e3a8a?style=flat&logo=linux&logoColor=white" />
     <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=flat&logo=ubuntu&logoColor=white" />
     <img src="https://img.shields.io/badge/Git-2563eb?style=flat&logo=git&logoColor=white" />
