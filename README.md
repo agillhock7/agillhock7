@@ -64,7 +64,7 @@
     <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/SSL%2FTLS-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/Git-3b82f6?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Codex-38bdf8?style=for-the-badge&logo=openai&logoColor=white&labelColor=0b1220" />
+    <img src="assets/codex-badge.svg" alt="Codex" />
   </a>
 </p>
 
