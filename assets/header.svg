@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" role="img" aria-label="Alexander Gill header">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" role="img" aria-label="Alexander Gill header">
   <title>Alexander Gill - Moving Forward</title>
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -14,7 +14,18 @@
     </filter>
   </defs>
 
-  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" />
+  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" >
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      keyTimes="0;0.333;0.667;1"
+      calcMode="spline"
+      keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
+      begin="-5s"
+      values="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z;M0 0 H1200 V176 Q900 188 600 176 T0 186 V0 Z;M0 0 H1200 V158 Q900 198 600 194 T0 202 V0 Z;M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z">
+    </animate>
+  </path>
   <path d="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z" fill="#8CCAAF" opacity="0.18" >
     <animate
       attributeName="d"

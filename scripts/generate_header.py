@@ -111,7 +111,7 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
 
 def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
     width = 1200
-    height = 220
+    height = 240
     chips = [
         ("Profile Views", fmt(views), "eye"),
         ("Followers", fmt(followers), "users"),
@@ -156,7 +156,18 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
     </filter>
   </defs>
 
-  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" />
+  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" >
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      keyTimes="0;0.333;0.667;1"
+      calcMode="spline"
+      keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
+      begin="-5s"
+      values="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z;M0 0 H1200 V176 Q900 188 600 176 T0 186 V0 Z;M0 0 H1200 V158 Q900 198 600 194 T0 202 V0 Z;M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z">
+    </animate>
+  </path>
   <path d="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z" fill="#8CCAAF" opacity="0.18" >
     <animate
       attributeName="d"
