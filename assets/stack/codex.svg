@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="34" role="img" aria-label="Codex">
+  <title>Codex</title>
+  <defs>
+    <linearGradient id="grad-codex" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <g shape-rendering="geometricPrecision">
+    <rect x="0.5" y="0.5" width="117" height="33" rx="7" fill="#0b1220" stroke="#1f2a3a"/>
+    <rect x="42" y="1" width="75" height="32" rx="6" fill="url(#grad-codex)"/>
+  </g>
+  <image x="11" y="7" width="20" height="20" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+CiAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE2LjU4NSAxMGE2LjU4NSA2LjU4NSAwIDEgMC0xMy4xNyAwIDYuNTg1IDYuNTg1IDAgMCAwIDEzLjE3IDBtLTMuMjUyIDEuNDE4LjEzNS4wMTRhLjY2NS42NjUgMCAwIDEgMCAxLjMwMmwtLjEzNS4wMTRoLTIuNWEuNjY1LjY2NSAwIDAgMSAwLTEuMzN6bS01LjY4IDEuMDA4YS42NjUuNjY1IDAgMCAxLTEuMTQtLjY4NXptMS4yNS0yLjc2OGEuNjYuNjYgMCAwIDEgMCAuNjg0bC0xLjI1IDIuMDg0LS41Ny0uMzQzLS41Ny0uMzQyTDcuNTU3IDEwIDYuNTEzIDguMjU5bC41Ny0uMzQyLjU3LS4zNDN6TTYuNzQxIDcuMzQ3YS42NjUuNjY1IDAgMCAxIC45MTIuMjI3bC0xLjE0LjY4NWEuNjY1LjY2NSAwIDAgMSAuMjI4LS45MTJNMTcuOTE1IDEwYTcuOTE1IDcuOTE1IDAgMSAxLTE1LjgzIDAgNy45MTUgNy45MTUgMCAwIDEgMTUuODMgMCIvPgo8L3N2Zz4=" />
+  <text
+    x="80.0"
+    y="22"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="12"
+    font-weight="700"
+    letter-spacing="0.8"
+  >
+    CODEX
+  </text>
+</svg>

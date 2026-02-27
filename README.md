@@ -31,41 +31,33 @@
 ## Tech Stack
 ### Frontend
 <p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=for-the-badge&logo=vuedotjs&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=for-the-badge&logo=vite&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0b1220&logoWidth=20" />
-  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vue.svg" alt="Vue" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vite.svg" alt="Vite" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/typescript.svg" alt="TypeScript" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/javascript.svg" alt="JavaScript" /></a>
 </p>
 
 ### Backend And CMS
 <p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/PHP-1e40af?style=for-the-badge&logo=php&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/Apache-2563eb?style=for-the-badge&logo=apache&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/cPanel-0284c7?style=for-the-badge&logo=cpanel&logoColor=white&labelColor=0b1220&logoWidth=20" />
-  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/php.svg" alt="PHP" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/wordpress.svg" alt="WordPress" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/apache.svg" alt="Apache" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/cpanel.svg" alt="cPanel" /></a>
 </p>
 
 ### Data And Storage
 <p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/MySQL-0284c7?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0b1220&logoWidth=20" />
-  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/mysql.svg" alt="MySQL" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" /></a>
 </p>
 
 ### Platform, Security, And Tools
 <p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=for-the-badge&logo=linux&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/SSL%2FTLS-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="https://img.shields.io/badge/Git-3b82f6?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220&logoWidth=20" />
-    <img src="assets/codex-badge.svg" alt="Codex" />
-  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/linux.svg" alt="Linux" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ubuntu.svg" alt="Ubuntu" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ssl-tls.svg" alt="SSL/TLS" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/git.svg" alt="Git" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/codex.svg" alt="Codex" /></a>
 </p>
 
 ## Current Focus

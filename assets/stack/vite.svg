@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="34" role="img" aria-label="Vite">
+  <title>Vite</title>
+  <defs>
+    <linearGradient id="grad-vite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <g shape-rendering="geometricPrecision">
+    <rect x="0.5" y="0.5" width="117" height="33" rx="7" fill="#0b1220" stroke="#1f2a3a"/>
+    <rect x="42" y="1" width="75" height="32" rx="6" fill="url(#grad-vite)"/>
+  </g>
+  <image x="11" y="7" width="20" height="20" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Vml0ZTwvdGl0bGU+PHBhdGggZD0iTTEzLjA1NiAyMy4yMzhhLjU3LjU3IDAgMCAxLTEuMDItLjM1NXYtNS4yMDJjMC0uNjMtLjUxMi0xLjE0My0xLjE0NC0xLjE0M0g1LjE0OGEuNTcuNTcgMCAwIDEtLjQ2NC0uOTAzbDMuNzc3LTUuMjljLjU0LS43NTMgMC0xLjgwNC0uOTMtMS44MDRILjU3YS41NzQuNTc0IDAgMCAxLS41NDMtLjc0Ni42LjYgMCAwIDEgLjA4LS4xNTdMNS4wMDguNzhhLjU3LjU3IDAgMCAxIC40NjctLjI0aDE0LjU4OWEuNTcuNTcgMCAwIDEgLjQ2Ni45MDNsLTMuNzc4IDUuMjljLS41NC43NTUgMCAxLjgwNi45MyAxLjgwNmg1Ljc0NWMuMjM4IDAgLjQyNC4xMzguNTEzLjMyMmEuNTYuNTYgMCAwIDEtLjA2My42MDN6Ii8+PC9zdmc+" />
+  <text
+    x="80.0"
+    y="22"
+    fill="#ffffff"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="12"
+    font-weight="700"
+    letter-spacing="0.8"
+  >
+    VITE
+  </text>
+</svg>
