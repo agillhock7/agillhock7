@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" role="img" aria-label="Alexander Gill header">
+  <title>Alexander Gill - Moving Forward</title>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#040d1b" />
+      <stop offset="55%" stop-color="#1d3a39" />
+      <stop offset="100%" stop-color="#5f8b7f" />
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b46a3a" />
+      <stop offset="100%" stop-color="#d49a62" />
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#120f1f" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="250" fill="url(#bgGrad)" />
+  <path d="M0,205 C240,226 520,182 760,198 C950,209 1060,196 1200,206 L1200,250 L0,250 Z" fill="#92bfad" opacity="0.25"/>
+  <path d="M0,216 C260,238 495,192 705,210 C922,226 1080,214 1200,220 L1200,250 L0,250 Z" fill="#203537" opacity="0.6"/>
+
+  <g filter="url(#softGlow)">
+    <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Alexander Gill</text>
+    <text x="60" y="170" fill="#8ecfb3" opacity="0.95" font-size="47" font-weight="700" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Moving Forward</text>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <rect x="556" y="20" width="620" height="64" rx="14" fill="#1b1624" opacity="0.35"/>
+    
+  <g transform="translate(572 30)">
+    <rect x="0" y="0" width="219" height="44" rx="9" fill="#1d1328" stroke="#5b2e66" />
+    <rect x="0" y="0" width="160" height="44" rx="9" fill="#311a44" />
+    <rect x="151" y="0" width="9" height="44" fill="#311a44" />
+    <rect x="160" y="0" width="59" height="44" rx="9" fill="url(#copperGrad)" />
+    <rect x="160" y="0" width="9" height="44" fill="url(#copperGrad)" />
+    <g transform="translate(12 14) scale(1.05)" fill="#fdf2f8" opacity="0.95">
+      <path d="M1.5 8s2.7-4.5 6.5-4.5S14.5 8 14.5 8s-2.7 4.5-6.5 4.5S1.5 8 1.5 8Zm6.5 2.4a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z" />
+    </g>
+    <text x="36" y="29" fill="#fde7ff" font-size="17" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700" letter-spacing="0.9">PROFILE VIEWS</text>
+    <text x="189.5" y="29" text-anchor="middle" fill="#fff9f0" font-size="19" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="800">119</text>
+  </g>
+
+  <g transform="translate(805 30)">
+    <rect x="0" y="0" width="175" height="44" rx="9" fill="#1d1328" stroke="#5b2e66" />
+    <rect x="0" y="0" width="125" height="44" rx="9" fill="#311a44" />
+    <rect x="116" y="0" width="9" height="44" fill="#311a44" />
+    <rect x="125" y="0" width="50" height="44" rx="9" fill="url(#copperGrad)" />
+    <rect x="125" y="0" width="9" height="44" fill="url(#copperGrad)" />
+    <g transform="translate(12 14) scale(1.05)" fill="#fdf2f8" opacity="0.95">
+      <path d="M5.2 7.1a2.1 2.1 0 1 1 4.2 0 2.1 2.1 0 0 1-4.2 0Zm-3 8.4v-.8c0-2.3 1.9-4.2 4.2-4.2h1.8c2.3 0 4.2 1.9 4.2 4.2v.8H2.2Zm10.5-9.3a1.8 1.8 0 1 1 0 3.6h-.6a2.8 2.8 0 0 0 .6-3.6Zm.4 9.3v-.8c0-1.2-.4-2.3-1.1-3.2h.3c1.9 0 3.4 1.5 3.4 3.4v.6h-2.6Z" />
+    </g>
+    <text x="36" y="29" fill="#fde7ff" font-size="17" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700" letter-spacing="0.9">FOLLOWERS</text>
+    <text x="150.0" y="29" text-anchor="middle" fill="#fff9f0" font-size="19" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="800">3</text>
+  </g>
+
+  <g transform="translate(994 30)">
+    <rect x="0" y="0" width="166" height="44" rx="9" fill="#1d1328" stroke="#5b2e66" />
+    <rect x="0" y="0" width="116" height="44" rx="9" fill="#311a44" />
+    <rect x="107" y="0" width="9" height="44" fill="#311a44" />
+    <rect x="116" y="0" width="50" height="44" rx="9" fill="url(#copperGrad)" />
+    <rect x="116" y="0" width="9" height="44" fill="url(#copperGrad)" />
+    <g transform="translate(12 14) scale(1.05)" fill="#fdf2f8" opacity="0.95">
+      <path d="M8 1.25a.75.75 0 0 1 .67.42l1.88 3.81 4.2.61a.75.75 0 0 1 .41 1.28l-3.04 2.97.72 4.19a.75.75 0 0 1-1.09.79L8 13.35l-3.77 1.97a.75.75 0 0 1-1.08-.79l.71-4.19L.82 7.37a.75.75 0 0 1 .42-1.28l4.2-.61L7.32 1.67A.75.75 0 0 1 8 1.25Z" />
+    </g>
+    <text x="36" y="29" fill="#fde7ff" font-size="17" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700" letter-spacing="0.9">STARS</text>
+    <text x="141.0" y="29" text-anchor="middle" fill="#fff9f0" font-size="19" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="800">4</text>
+  </g>
+
+  </g>
+</svg>

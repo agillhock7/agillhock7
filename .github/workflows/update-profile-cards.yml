@@ -9,6 +9,7 @@ on:
     paths:
       - ".github/workflows/update-profile-cards.yml"
       - "scripts/generate_stats_card.py"
+      - "scripts/generate_header.py"
   schedule:
     - cron: "23 */6 * * *"
 
@@ -23,6 +24,12 @@ jobs:
 
       - name: Ensure assets directory
         run: mkdir -p assets
+
+      - name: Generate header
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: agillhock7
+        run: python3 scripts/generate_header.py
 
       - name: Generate stats card
         env:

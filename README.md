@@ -1,21 +1,6 @@
 <p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img
-      src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Alexander%20Gill&fontAlignY=35&desc=Moving%20Forward&descAlignY=58&animation=twinkling&color=0:171F1F,100:8CCAAF&fontColor=8CCAAF&descColor=8CCAAF"
-      alt="Header"
-    />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://komarev.com/ghpvc/?username=agillhock7&label=PROFILE%20VIEWS&color=fb7185&style=for-the-badge" alt="Profile views" />
-  </a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/github/followers/agillhock7?label=FOLLOWERS&style=for-the-badge&color=f59e0b&labelColor=111827&logo=github&logoColor=ffffff" alt="Followers" />
-  </a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/github/stars/agillhock7?label=STARS&style=for-the-badge&color=f97316&labelColor=111827&logo=github&logoColor=ffffff" alt="Stars" />
+    <img src="assets/header.svg" alt="Header" />
   </a>
 </p>
 
