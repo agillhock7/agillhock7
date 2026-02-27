@@ -29,10 +29,8 @@
 - Linux-first workflow with Git-based delivery.
 
 ## Tech Stack
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend-1e3a8a?style=for-the-badge&logo=vercel&logoColor=93c5fd&labelColor=0b1220" alt="Frontend" />
-</p>
-<p align="center">
+### Frontend
+<p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/Vue-1e3a8a?style=for-the-badge&logo=vuedotjs&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/Vite-1d4ed8?style=for-the-badge&logo=vite&logoColor=white&labelColor=0b1220" />
@@ -41,34 +39,31 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Backend-1d4ed8?style=for-the-badge&logo=codeigniter&logoColor=bfdbfe&labelColor=0b1220" alt="Backend" />
-</p>
-<p align="center">
+### Backend And CMS
+<p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/PHP-1e40af?style=for-the-badge&logo=php&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Apache-2563eb?style=for-the-badge&logo=apache&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/cPanel-0284c7?style=for-the-badge&logo=cpanel&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Data-0284c7?style=for-the-badge&logo=databricks&logoColor=e0f2fe&labelColor=0b1220" alt="Data" />
-</p>
-<p align="center">
+### Data And Storage
+<p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/MySQL-0284c7?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform%20%26%20Tools-0ea5e9?style=for-the-badge&logo=gnubash&logoColor=e0f2fe&labelColor=0b1220" alt="Platform and Tools" />
-</p>
-<p align="center">
+### Platform, Security, And Tools
+<p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
     <img src="https://img.shields.io/badge/Linux-1e3a8a?style=for-the-badge&logo=linux&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Git-2563eb?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/SSL%2FTLS-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Git-3b82f6?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220" />
     <img src="https://img.shields.io/badge/Codex-38bdf8?style=for-the-badge&logo=openai&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
