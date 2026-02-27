@@ -111,7 +111,7 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
 
 def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
     width = 1200
-    height = 250
+    height = 212
     chips = [
         ("Profile Views", fmt(views), "eye"),
         ("Followers", fmt(followers), "users"),
@@ -157,9 +157,9 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
     </filter>
   </defs>
 
-  <path d="M0,0 H1200 V196 C1028,214 890,190 704,202 C458,218 246,192 0,208 Z" fill="url(#bgGrad)" />
-  <path d="M0,200 C252,216 458,190 704,204 C902,216 1036,204 1200,210" fill="none" stroke="#92bfad" stroke-opacity="0.28" stroke-width="12"/>
-  <path d="M0,210 C264,226 502,200 732,214 C938,227 1062,214 1200,220" fill="none" stroke="#203537" stroke-opacity="0.55" stroke-width="10"/>
+  <path d="M0,0 H1200 V176 C1018,196 884,172 704,184 C468,200 248,176 0,194 Z" fill="url(#bgGrad)" />
+  <path d="M0,182 C246,198 470,172 704,186 C914,198 1046,186 1200,192" fill="none" stroke="#92bfad" stroke-opacity="0.33" stroke-width="16"/>
+  <path d="M0,192 C258,206 486,182 732,196 C936,208 1060,196 1200,202" fill="none" stroke="#203537" stroke-opacity="0.62" stroke-width="12"/>
 
   <g filter="url(#softGlow)">
     <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{name}</text>
