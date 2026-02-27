@@ -32,38 +32,38 @@
 ### Frontend
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=for-the-badge&logo=vuedotjs&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=for-the-badge&logo=vite&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=for-the-badge&logo=vuedotjs&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=for-the-badge&logo=vite&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0b1220&logoWidth=20" />
   </a>
 </p>
 
 ### Backend And CMS
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/PHP-1e40af?style=for-the-badge&logo=php&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Apache-2563eb?style=for-the-badge&logo=apache&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/cPanel-0284c7?style=for-the-badge&logo=cpanel&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/PHP-1e40af?style=for-the-badge&logo=php&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/Apache-2563eb?style=for-the-badge&logo=apache&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/cPanel-0284c7?style=for-the-badge&logo=cpanel&logoColor=white&labelColor=0b1220&logoWidth=20" />
   </a>
 </p>
 
 ### Data And Storage
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/MySQL-0284c7?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/MySQL-0284c7?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0b1220&logoWidth=20" />
   </a>
 </p>
 
 ### Platform, Security, And Tools
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=for-the-badge&logo=linux&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/SSL%2FTLS-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white&labelColor=0b1220" />
-    <img src="https://img.shields.io/badge/Git-3b82f6?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=for-the-badge&logo=linux&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/SSL%2FTLS-2563eb?style=for-the-badge&logo=letsencrypt&logoColor=white&labelColor=0b1220&logoWidth=20" />
+    <img src="https://img.shields.io/badge/Git-3b82f6?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220&logoWidth=20" />
     <img src="assets/codex-badge.svg" alt="Codex" />
   </a>
 </p>
