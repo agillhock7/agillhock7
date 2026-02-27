@@ -64,7 +64,7 @@ def fmt(n: int) -> str:
 def estimate_text_width(text: str, font_size: float, letter_spacing: float) -> float:
     compact = len(text.replace(" ", ""))
     spaces = text.count(" ")
-    return (compact * (font_size * 0.62 + letter_spacing)) + (spaces * (font_size * 0.36))
+    return (compact * (font_size * 0.58 + letter_spacing)) + (spaces * (font_size * 0.34))
 
 
 def octicon_path(kind: str) -> str:
@@ -79,30 +79,31 @@ def octicon_path(kind: str) -> str:
 def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, int]:
     label_text = label.upper()
     value_text = value
-    label_font_size = 12
-    label_letter_spacing = 0.6
+    label_font_size = 10
+    label_letter_spacing = 0.2
     label_text_w = estimate_text_width(label_text, label_font_size, label_letter_spacing)
-    label_w = max(92, int(label_text_w + 42))
-    value_w = max(38, int(len(value_text) * 9 + 22))
-    h = 38
+    label_w = max(84, int(label_text_w + 34))
+    value_w = max(34, int(len(value_text) * 7 + 18))
+    h = 32
     total_w = label_w + value_w
     icon_path = octicon_path(icon)
-    text_y = 25
+    text_y = 21
     value_x = label_w + (value_w / 2)
-    label_text_x = 31
+    label_text_x = 26
+    label_available_w = label_w - label_text_x - 8
 
     svg = f"""
   <g transform="translate({x} {y})">
-    <rect x="0" y="0" width="{total_w}" height="{h}" rx="8" fill="#1d1328" stroke="#5b2e66" />
-    <rect x="0" y="0" width="{label_w}" height="{h}" rx="8" fill="#311a44" />
-    <rect x="{label_w - 7}" y="0" width="7" height="{h}" fill="#311a44" />
-    <rect x="{label_w}" y="0" width="{value_w}" height="{h}" rx="8" fill="url(#copperGrad)" />
-    <rect x="{label_w}" y="0" width="7" height="{h}" fill="url(#copperGrad)" />
-    <g transform="translate(10 11) scale(0.95)" fill="#fdf2f8" opacity="0.95">
+    <rect x="0" y="0" width="{total_w}" height="{h}" rx="7" fill="#1d1328" stroke="#5b2e66" />
+    <rect x="0" y="0" width="{label_w}" height="{h}" rx="7" fill="#311a44" />
+    <rect x="{label_w - 6}" y="0" width="6" height="{h}" fill="#311a44" />
+    <rect x="{label_w}" y="0" width="{value_w}" height="{h}" rx="7" fill="url(#copperGrad)" />
+    <rect x="{label_w}" y="0" width="6" height="{h}" fill="url(#copperGrad)" />
+    <g transform="translate(8 9) scale(0.78)" fill="#fdf2f8" opacity="0.95">
       <path d="{icon_path}" />
     </g>
-    <text x="{label_text_x}" y="{text_y}" fill="#fde7ff" font-size="{label_font_size}" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700" letter-spacing="{label_letter_spacing}">{label_text}</text>
-    <text x="{value_x}" y="{text_y}" text-anchor="middle" fill="#fff9f0" font-size="18" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="800">{value_text}</text>
+    <text x="{label_text_x}" y="{text_y}" fill="#fde7ff" font-size="{label_font_size}" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700" letter-spacing="{label_letter_spacing}" textLength="{label_available_w}" lengthAdjust="spacingAndGlyphs">{label_text}</text>
+    <text x="{value_x}" y="{text_y}" text-anchor="middle" fill="#fff9f0" font-size="14" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="800">{value_text}</text>
   </g>
 """
     return svg, total_w
@@ -117,7 +118,7 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
         ("Stars", fmt(stars), "star"),
     ]
 
-    spacing = 10
+    spacing = 8
     chip_parts: list[str] = []
     total_chip_width = 0
     chip_widths = []
@@ -127,8 +128,8 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
         total_chip_width += w
     total_chip_width += spacing * (len(chips) - 1)
 
-    start_x = width - total_chip_width - 34
-    chip_y = 28
+    start_x = width - total_chip_width - 28
+    chip_y = 22
     cursor = start_x
     for idx, (label, value, icon) in enumerate(chips):
         snippet, w = chip_svg(cursor, chip_y, label, value, icon)
@@ -166,7 +167,7 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
   </g>
 
   <g filter="url(#softGlow)">
-    <rect x="{start_x - 12}" y="{chip_y - 8}" width="{total_chip_width + 24}" height="54" rx="12" fill="#1b1624" opacity="0.35"/>
+    <rect x="{start_x - 10}" y="{chip_y - 7}" width="{total_chip_width + 20}" height="46" rx="10" fill="#1b1624" opacity="0.35"/>
     {chips_group}
   </g>
 </svg>
