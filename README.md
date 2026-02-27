@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=22C55E&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=60A5FA&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
 </p>
 
 ## About
@@ -29,18 +29,18 @@
 ## Tech Stack
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Vue-22c55e?style=flat&logo=vuedotjs&logoColor=white" />
-    <img src="https://img.shields.io/badge/Vite-22c55e?style=flat&logo=vite&logoColor=white" />
-    <img src="https://img.shields.io/badge/TypeScript-22c55e?style=flat&logo=typescript&logoColor=white" />
-    <img src="https://img.shields.io/badge/JavaScript-22c55e?style=flat&logo=javascript&logoColor=white" />
-    <img src="https://img.shields.io/badge/PHP-22c55e?style=flat&logo=php&logoColor=white" />
-    <img src="https://img.shields.io/badge/WordPress-22c55e?style=flat&logo=wordpress&logoColor=white" />
-    <img src="https://img.shields.io/badge/MySQL-22c55e?style=flat&logo=mysql&logoColor=white" />
-    <img src="https://img.shields.io/badge/PostgreSQL-22c55e?style=flat&logo=postgresql&logoColor=white" />
-    <img src="https://img.shields.io/badge/Linux-22c55e?style=flat&logo=linux&logoColor=white" />
-    <img src="https://img.shields.io/badge/Ubuntu-22c55e?style=flat&logo=ubuntu&logoColor=white" />
-    <img src="https://img.shields.io/badge/Git-22c55e?style=flat&logo=git&logoColor=white" />
-    <img src="https://img.shields.io/badge/Codex-22c55e?style=flat&logo=openai&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=flat&logo=vuedotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=flat&logo=vite&logoColor=white" />
+    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=flat&logo=typescript&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=flat&logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/PHP-1e40af?style=flat&logo=php&logoColor=white" />
+    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=flat&logo=wordpress&logoColor=white" />
+    <img src="https://img.shields.io/badge/MySQL-0284c7?style=flat&logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=flat&logo=postgresql&logoColor=white" />
+    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=flat&logo=linux&logoColor=white" />
+    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=flat&logo=ubuntu&logoColor=white" />
+    <img src="https://img.shields.io/badge/Git-2563eb?style=flat&logo=git&logoColor=white" />
+    <img src="https://img.shields.io/badge/Codex-38bdf8?style=flat&logo=openai&logoColor=white" />
   </a>
 </p>
 

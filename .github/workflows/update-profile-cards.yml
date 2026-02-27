@@ -3,7 +3,7 @@ name: Update Profile Cards
 on:
   workflow_dispatch:
   schedule:
-    - cron: "23 7 * * *"
+    - cron: "23 */6 * * *"
 
 permissions:
   contents: write
