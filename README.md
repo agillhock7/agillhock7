@@ -9,9 +9,13 @@
 
 <p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://komarev.com/ghpvc/?username=agillhock7&label=Profile%20Views&color=22c55e&style=flat" alt="Profile views" />
-    <img src="https://img.shields.io/github/followers/agillhock7?label=Followers&style=flat&color=22c55e&labelColor=0b1220" alt="Followers" />
-    <img src="https://img.shields.io/github/stars/agillhock7?label=Stars&style=flat&color=22c55e&labelColor=0b1220" alt="Stars" />
+    <img src="https://komarev.com/ghpvc/?username=agillhock7&label=PROFILE%20VIEWS&color=fb7185&style=for-the-badge" alt="Profile views" />
+  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
+    <img src="https://img.shields.io/github/followers/agillhock7?label=FOLLOWERS&style=for-the-badge&color=f59e0b&labelColor=111827&logo=github&logoColor=ffffff" alt="Followers" />
+  </a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
+    <img src="https://img.shields.io/github/stars/agillhock7?label=STARS&style=for-the-badge&color=f97316&labelColor=111827&logo=github&logoColor=ffffff" alt="Stars" />
   </a>
 </p>
 
