@@ -111,7 +111,7 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
 
 def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
     width = 1200
-    height = 212
+    height = 220
     chips = [
         ("Profile Views", fmt(views), "eye"),
         ("Followers", fmt(followers), "users"),
@@ -144,9 +144,8 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
   <title>Alexander Gill - Moving Forward</title>
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#040d1b" />
-      <stop offset="55%" stop-color="#1d3a39" />
-      <stop offset="100%" stop-color="#5f8b7f" />
+      <stop offset="0%" stop-color="#171F1F" />
+      <stop offset="100%" stop-color="#8CCAAF" />
     </linearGradient>
     <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#b46a3a" />
@@ -157,9 +156,9 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
     </filter>
   </defs>
 
-  <path d="M0,0 H1200 V176 C1018,196 884,172 704,184 C468,200 248,176 0,194 Z" fill="url(#bgGrad)" />
-  <path d="M0,182 C246,198 470,172 704,186 C914,198 1046,186 1200,192" fill="none" stroke="#92bfad" stroke-opacity="0.33" stroke-width="16"/>
-  <path d="M0,192 C258,206 486,182 732,196 C936,208 1060,196 1200,202" fill="none" stroke="#203537" stroke-opacity="0.62" stroke-width="12"/>
+  <rect width="{width}" height="{height}" fill="url(#bgGrad)" />
+  <path d="M0 220 L0 126 Q300 63 600 110 T1200 71 L1200 220 Z" fill="url(#bgGrad)" opacity="0.4" />
+  <path d="M0 220 L0 102 Q300 31 600 79 T1200 63 L1200 220 Z" fill="url(#bgGrad)" opacity="0.4" />
 
   <g filter="url(#softGlow)">
     <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{name}</text>
