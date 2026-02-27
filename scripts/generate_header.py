@@ -13,6 +13,7 @@ from pathlib import Path
 GITHUB_USER = os.getenv("GITHUB_USER", "agillhock7")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 OUTFILE = Path("assets/header.svg")
+HEADER_HEIGHT = int(os.getenv("HEADER_HEIGHT", "240"))
 
 
 def api_get_json(url: str) -> dict | list:
@@ -111,7 +112,7 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
 
 def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
     width = 1200
-    height = 290
+    height = max(180, HEADER_HEIGHT)
     chips = [
         ("Profile Views", fmt(views), "eye"),
         ("Followers", fmt(followers), "users"),
@@ -140,6 +141,22 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
 
     chips_group = "".join(chip_parts)
 
+    h = height
+    name_y = int(h * 0.52)
+    slogan_y = int(h * 0.72)
+
+    base_0 = f"M0 0 H1200 V{h-72} Q900 {h-37} 600 {h-54} T0 {h-46} V0 Z"
+    base_1 = f"M0 0 H1200 V{h-64} Q900 {h-52} 600 {h-64} T0 {h-54} V0 Z"
+    base_2 = f"M0 0 H1200 V{h-82} Q900 {h-42} 600 {h-46} T0 {h-38} V0 Z"
+
+    wave1_0 = f"M0 0 L0 {h-110} Q300 {h-68} 600 {h-95} T1200 {h-75} L1200 0 Z"
+    wave1_1 = f"M0 0 L0 {h-75} Q300 {h-68} 600 {h-85} T1200 {h-100} L1200 0 Z"
+    wave1_2 = f"M0 0 L0 {h-55} Q300 {h-103} 600 {h-55} T1200 {h-100} L1200 0 Z"
+
+    wave2_0 = f"M0 0 L0 {h-95} Q300 {h-42} 600 {h-70} T1200 {h-58} L1200 0 Z"
+    wave2_1 = f"M0 0 L0 {h-72} Q300 {h-113} 600 {h-113} T1200 {h-86} L1200 0 Z"
+    wave2_2 = f"M0 0 L0 {h-80} Q300 {h-107} 600 {h-70} T1200 {h-51} L1200 0 Z"
+
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" role="img" aria-label="Alexander Gill header">
   <title>Alexander Gill - Moving Forward</title>
   <defs>
@@ -156,7 +173,7 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
     </filter>
   </defs>
 
-  <path d="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z" fill="url(#bgGrad)" >
+  <path d="{base_0}" fill="url(#bgGrad)" >
     <animate
       attributeName="d"
       dur="20s"
@@ -165,10 +182,10 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
       calcMode="spline"
       keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
       begin="-5s"
-      values="M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z;M0 0 H1200 V176 Q900 188 600 176 T0 186 V0 Z;M0 0 H1200 V158 Q900 198 600 194 T0 202 V0 Z;M0 0 H1200 V168 Q900 203 600 186 T0 194 V0 Z">
+      values="{base_0};{base_1};{base_2};{base_0}">
     </animate>
   </path>
-  <path d="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z" fill="#8CCAAF" opacity="0.18" >
+  <path d="{wave1_0}" fill="#8CCAAF" opacity="0.18" >
     <animate
       attributeName="d"
       dur="20s"
@@ -177,10 +194,10 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
       calcMode="spline"
       keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
       begin="-10s"
-      values="M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z;M0 0 L0 165 Q300 172 600 155 T1200 140 L1200 0 Z;M0 0 L0 185 Q300 137 600 185 T1200 140 L1200 0 Z;M0 0 L0 130 Q300 172 600 145 T1200 165 L1200 0 Z">
+      values="{wave1_0};{wave1_1};{wave1_2};{wave1_0}">
     </animate>
   </path>
-  <path d="M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z" fill="#171F1F" opacity="0.22" >
+  <path d="{wave2_0}" fill="#171F1F" opacity="0.22" >
       <animate
         attributeName="d"
         dur="20s"
@@ -189,13 +206,13 @@ def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) ->
         calcMode="spline"
         keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
         begin="0s"
-        values="M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z;M0 0 L0 168 Q300 127 600 127 T1200 154 L1200 0 Z;M0 0 L0 160 Q300 133 600 170 T1200 189 L1200 0 Z;M0 0 L0 145 Q300 198 600 170 T1200 182 L1200 0 Z">
+        values="{wave2_0};{wave2_1};{wave2_2};{wave2_0}">
       </animate>
     </path>
 
   <g filter="url(#softGlow)">
-    <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{name}</text>
-    <text x="60" y="170" fill="#8ecfb3" opacity="0.95" font-size="47" font-weight="700" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{slogan}</text>
+    <text x="60" y="{name_y}" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{name}</text>
+    <text x="60" y="{slogan_y}" fill="#8ecfb3" opacity="0.95" font-size="47" font-weight="700" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{slogan}</text>
   </g>
 
   <g filter="url(#softGlow)">
