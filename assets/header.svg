@@ -16,7 +16,7 @@
 
   <rect width="1200" height="220" fill="url(#bgGrad)" />
   <g transform="translate(0,220) scale(1.40515,-1.40515)">
-    <path d="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z" fill="url(#bgGrad)" opacity="0.4" >
+    <path d="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z" fill="#8CCAAF" opacity="0.26" >
       <animate
         attributeName="d"
         dur="20s"
@@ -28,7 +28,7 @@
         values="M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z;M0 0L 0 85Q 213.5 100 427 80T 854 70L 854 0 Z;M0 0L 0 105Q 213.5 75 427 105T 854 70L 854 0 Z;M0 0L 0 60Q 213.5 100 427 70T 854 95L 854 0 Z">
       </animate>
     </path>
-    <path d="M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z" fill="url(#bgGrad)" opacity="0.4" >
+    <path d="M0 0L 0 75Q 213.5 120 427 90T 854 100L 854 0 Z" fill="#171F1F" opacity="0.34" >
       <animate
         attributeName="d"
         dur="20s"
