@@ -29,39 +29,47 @@
 - Linux-first workflow with Git-based delivery.
 
 ## Tech Stack
-<p><strong>Frontend</strong></p>
-<p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-1e3a8a?style=for-the-badge&logo=vercel&logoColor=93c5fd&labelColor=0b1220" alt="Frontend" />
+</p>
+<p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=flat&logo=vuedotjs&logoColor=white" />
-    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=flat&logo=vite&logoColor=white" />
-    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=flat&logo=typescript&logoColor=white" />
-    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=flat&logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/Vue-1e3a8a?style=for-the-badge&logo=vuedotjs&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Vite-1d4ed8?style=for-the-badge&logo=vite&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/TypeScript-2563eb?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/JavaScript-3b82f6?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
-<p><strong>Backend</strong></p>
-<p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Backend-1d4ed8?style=for-the-badge&logo=codeigniter&logoColor=bfdbfe&labelColor=0b1220" alt="Backend" />
+</p>
+<p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/PHP-1e40af?style=flat&logo=php&logoColor=white" />
-    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=flat&logo=wordpress&logoColor=white" />
+    <img src="https://img.shields.io/badge/PHP-1e40af?style=for-the-badge&logo=php&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/WordPress-1d4ed8?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
-<p><strong>Data</strong></p>
-<p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Data-0284c7?style=for-the-badge&logo=databricks&logoColor=e0f2fe&labelColor=0b1220" alt="Data" />
+</p>
+<p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/MySQL-0284c7?style=flat&logo=mysql&logoColor=white" />
-    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=flat&logo=postgresql&logoColor=white" />
+    <img src="https://img.shields.io/badge/MySQL-0284c7?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/PostgreSQL-0ea5e9?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
-<p><strong>Platform and Tools</strong></p>
-<p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform%20%26%20Tools-0ea5e9?style=for-the-badge&logo=gnubash&logoColor=e0f2fe&labelColor=0b1220" alt="Platform and Tools" />
+</p>
+<p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=flat&logo=linux&logoColor=white" />
-    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=flat&logo=ubuntu&logoColor=white" />
-    <img src="https://img.shields.io/badge/Git-2563eb?style=flat&logo=git&logoColor=white" />
-    <img src="https://img.shields.io/badge/Codex-38bdf8?style=flat&logo=openai&logoColor=white" />
+    <img src="https://img.shields.io/badge/Linux-1e3a8a?style=for-the-badge&logo=linux&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Ubuntu-1e40af?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Git-2563eb?style=for-the-badge&logo=git&logoColor=white&labelColor=0b1220" />
+    <img src="https://img.shields.io/badge/Codex-38bdf8?style=for-the-badge&logo=openai&logoColor=white&labelColor=0b1220" />
   </a>
 </p>
 
