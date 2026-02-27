@@ -15,9 +15,9 @@
     </filter>
   </defs>
 
-  <rect width="1200" height="250" fill="url(#bgGrad)" />
-  <path d="M0,205 C240,226 520,182 760,198 C950,209 1060,196 1200,206 L1200,250 L0,250 Z" fill="#92bfad" opacity="0.25"/>
-  <path d="M0,216 C260,238 495,192 705,210 C922,226 1080,214 1200,220 L1200,250 L0,250 Z" fill="#203537" opacity="0.6"/>
+  <path d="M0,0 H1200 V196 C1028,214 890,190 704,202 C458,218 246,192 0,208 Z" fill="url(#bgGrad)" />
+  <path d="M0,200 C252,216 458,190 704,204 C902,216 1036,204 1200,210" fill="none" stroke="#92bfad" stroke-opacity="0.28" stroke-width="12"/>
+  <path d="M0,210 C264,226 502,200 732,214 C938,227 1062,214 1200,220" fill="none" stroke="#203537" stroke-opacity="0.55" stroke-width="10"/>
 
   <g filter="url(#softGlow)">
     <text x="60" y="122" fill="#8ecfb3" font-size="88" font-weight="800" font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Alexander Gill</text>
