@@ -111,7 +111,7 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
 
 def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
     width = 1200
-    height = 240
+    height = 290
     chips = [
         ("Profile Views", fmt(views), "eye"),
         ("Followers", fmt(followers), "users"),
