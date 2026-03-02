@@ -183,7 +183,7 @@ def build_live_previews(projects: list[dict]) -> str:
         homepage = project["homepage"]
         encoded = urllib.parse.quote(homepage, safe=":/?&=%#")
         screenshot_url = (
-            f"https://image.thum.io/get/width/1200/crop/720/noanimate/{encoded}"
+            f"https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/{encoded}"
         )
         live_badge = f'assets/links/live-{project["slug"]}.svg'
         cell = (
