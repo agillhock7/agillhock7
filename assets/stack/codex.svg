@@ -9,11 +9,14 @@
       <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="grad-codex-outer-clip">
+      <rect x="0.5" y="0.5" width="125" height="35" rx="8" />
+    </clipPath>
   </defs>
   <g shape-rendering="geometricPrecision">
     <rect x="0.5" y="0.5" width="125" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
     <rect x="44" y="1" width="81" height="34" rx="7" fill="url(#grad-codex)"/>
-    <path d="M1 1 H125 V12 H1 Z" fill="url(#grad-codex-top)" rx="8"/>
+    <rect x="1" y="1" width="124" height="11" fill="url(#grad-codex-top)" clip-path="url(#grad-codex-outer-clip)" />
   </g>
   <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+CiAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE2LjU4NSAxMGE2LjU4NSA2LjU4NSAwIDEgMC0xMy4xNyAwIDYuNTg1IDYuNTg1IDAgMCAwIDEzLjE3IDBtLTMuMjUyIDEuNDE4LjEzNS4wMTRhLjY2NS42NjUgMCAwIDEgMCAxLjMwMmwtLjEzNS4wMTRoLTIuNWEuNjY1LjY2NSAwIDAgMSAwLTEuMzN6bS01LjY4IDEuMDA4YS42NjUuNjY1IDAgMCAxLTEuMTQtLjY4NXptMS4yNS0yLjc2OGEuNjYuNjYgMCAwIDEgMCAuNjg0bC0xLjI1IDIuMDg0LS41Ny0uMzQzLS41Ny0uMzQyTDcuNTU3IDEwIDYuNTEzIDguMjU5bC41Ny0uMzQyLjU3LS4zNDN6TTYuNzQxIDcuMzQ3YS42NjUuNjY1IDAgMCAxIC45MTIuMjI3bC0xLjE0LjY4NWEuNjY1LjY2NSAwIDAgMSAuMjI4LS45MTJNMTcuOTE1IDEwYTcuOTE1IDcuOTE1IDAgMSAxLTE1LjgzIDAgNy45MTUgNy45MTUgMCAwIDEgMTUuODMgMCIvPgo8L3N2Zz4=" />
   <text

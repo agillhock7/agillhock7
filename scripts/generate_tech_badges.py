@@ -89,11 +89,14 @@ def build_badge(label: str, icon_uri: str, gradient_id: str) -> str:
       <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="{gradient_id}-outer-clip">
+      <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="8" />
+    </clipPath>
   </defs>
   <g shape-rendering="geometricPrecision">
     <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
     <rect x="{icon_panel_width}" y="1" width="{label_panel_width - 1}" height="{height - 2}" rx="7" fill="url(#{gradient_id})"/>
-    <path d="M1 1 H{total_width - 1} V12 H1 Z" fill="url(#{gradient_id}-top)" rx="8"/>
+    <rect x="1" y="1" width="{total_width - 2}" height="11" fill="url(#{gradient_id}-top)" clip-path="url(#{gradient_id}-outer-clip)" />
   </g>
   <image x="11" y="7" width="22" height="22" href="{icon_uri}" />
   <text

@@ -9,11 +9,14 @@
       <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="grad-roblox-studio-outer-clip">
+      <rect x="0.5" y="0.5" width="176" height="35" rx="8" />
+    </clipPath>
   </defs>
   <g shape-rendering="geometricPrecision">
     <rect x="0.5" y="0.5" width="176" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
     <rect x="44" y="1" width="132" height="34" rx="7" fill="url(#grad-roblox-studio)"/>
-    <path d="M1 1 H176 V12 H1 Z" fill="url(#grad-roblox-studio-top)" rx="8"/>
+    <rect x="1" y="1" width="175" height="11" fill="url(#grad-roblox-studio-top)" clip-path="url(#grad-roblox-studio-outer-clip)" />
   </g>
   <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Um9ibG94IFN0dWRpbzwvdGl0bGU+PHBhdGggZD0iTSAxMy45MzYgMTUuMzU2IEwgMS44MjYgMTIuMTEyIEwgMCAxOC45MyBMIDE4LjkyOCAyNCBMIDIxLjYwOCAxNC4wMSBMIDE0Ljc5IDEyLjE4IEwgMTMuOTM2IDE1LjM1NiBaIE0gNS4wNzIgMCBMIDIuMzk0IDkuOTkyIEwgOS4yMSAxMS44MjIgTCAxMC4wNjQgOC42NDQgTCAyMi4xNzQgMTEuODkgTCAyNCA1LjA3MiBMIDUuMDcyIDAgWiIvPjwvc3ZnPg==" />
   <text
