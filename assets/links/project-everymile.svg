@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="32" role="img" aria-label="EveryMile">
+  <title>EveryMile</title>
+  <defs>
+    <linearGradient id="grad-project-everymile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f4d42" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="grad-project-everymile-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g shape-rendering="geometricPrecision">
+    <rect x="0.5" y="0.5" width="127" height="31" rx="7" fill="#0f1b19" stroke="#2f5b4f" />
+    <rect x="1" y="1" width="126" height="30" rx="6" fill="url(#grad-project-everymile)" />
+    <path d="M1 1 H127 V11 H1 Z" fill="url(#grad-project-everymile-shine)" />
+  </g>
+  <text
+    x="64.0"
+    y="21"
+    fill="#f1fff9"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.8"
+  >
+    EVERYMILE
+  </text>
+</svg>

@@ -10,6 +10,8 @@ on:
       - ".github/workflows/update-profile-cards.yml"
       - "scripts/generate_stats_card.py"
       - "scripts/generate_header.py"
+      - "scripts/generate_tech_badges.py"
+      - "scripts/generate_featured_content.py"
   schedule:
     - cron: "23 */6 * * *"
 
@@ -32,6 +34,15 @@ jobs:
           HEADER_HEIGHT: "240"
         run: python3 scripts/generate_header.py
 
+      - name: Generate tech stack badges
+        run: python3 scripts/generate_tech_badges.py
+
+      - name: Generate featured project content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: agillhock7
+        run: python3 scripts/generate_featured_content.py
+
       - name: Generate stats card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,6 +58,6 @@ jobs:
       - name: Commit updated cards
         uses: EndBug/add-and-commit@v9
         with:
-          add: "assets/*.svg"
+          add: "assets/**/*.svg README.md"
           message: "chore: update profile cards"
           default_author: github_actions

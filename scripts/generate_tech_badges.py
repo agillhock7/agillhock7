@@ -15,6 +15,7 @@ SIMPLE_ICON_ITEMS = [
     ("vite", "Vite", "vite"),
     ("typescript", "TypeScript", "typescript"),
     ("javascript", "JavaScript", "javascript"),
+    ("lua", "Lua", "lua"),
     ("php", "PHP", "php"),
     ("wordpress", "WordPress", "wordpress"),
     ("apache", "Apache", "apache"),
@@ -50,34 +51,39 @@ def to_data_uri(svg_source: str) -> str:
 
 
 def build_badge(label: str, icon_uri: str, gradient_id: str) -> str:
-    icon_panel_width = 42
-    label_panel_width = max(76, int(len(label) * 8.5) + 18)
+    icon_panel_width = 44
+    label_panel_width = max(82, int(len(label) * 8.6) + 22)
     total_width = icon_panel_width + label_panel_width
-    height = 34
+    height = 36
     text_x = icon_panel_width + (label_panel_width / 2)
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{height}" role="img" aria-label="{label}">
   <title>{label}</title>
   <defs>
     <linearGradient id="{gradient_id}" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8" />
-      <stop offset="100%" stop-color="#38bdf8" />
+      <stop offset="0%" stop-color="#1e4a3f" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="{gradient_id}-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
   </defs>
   <g shape-rendering="geometricPrecision">
-    <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="7" fill="#0b1220" stroke="#1f2a3a"/>
-    <rect x="{icon_panel_width}" y="1" width="{label_panel_width - 1}" height="{height - 2}" rx="6" fill="url(#{gradient_id})"/>
+    <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
+    <rect x="{icon_panel_width}" y="1" width="{label_panel_width - 1}" height="{height - 2}" rx="7" fill="url(#{gradient_id})"/>
+    <path d="M1 1 H{total_width - 1} V12 H1 Z" fill="url(#{gradient_id}-top)" rx="8"/>
   </g>
-  <image x="11" y="7" width="20" height="20" href="{icon_uri}" />
+  <image x="11" y="7" width="22" height="22" href="{icon_uri}" />
   <text
     x="{text_x}"
-    y="22"
-    fill="#ffffff"
+    y="23"
+    fill="#f1fff9"
     text-anchor="middle"
     font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
-    font-size="12"
+    font-size="11"
     font-weight="700"
-    letter-spacing="0.8"
+    letter-spacing="0.9"
   >
     {label.upper()}
   </text>
