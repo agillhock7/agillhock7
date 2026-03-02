@@ -40,7 +40,7 @@
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/mysql.svg" alt="MySQL" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/phpmyadmin.svg" alt="phpMyAdmin" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/pgadmin.svg" alt="pgAdmin" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/phppgadmin.svg" alt="phpPgAdmin" /></a>
 </p>
 
 ### Platform, Security, And Tools

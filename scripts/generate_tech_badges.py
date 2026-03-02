@@ -23,7 +23,7 @@ ICON_ITEMS = [
     ("mysql", "MySQL", "simple:mysql"),
     ("postgresql", "PostgreSQL", "simple:postgresql"),
     ("phpmyadmin", "phpMyAdmin", "simple:phpmyadmin"),
-    ("pgadmin", "pgAdmin", "custom:pgadmin"),
+    ("phppgadmin", "phpPgAdmin", "custom:phppgadmin"),
     ("linux", "Linux", "simple:linux"),
     ("ubuntu", "Ubuntu", "simple:ubuntu"),
     ("ssl-tls", "SSL/TLS", "simple:letsencrypt"),
@@ -51,7 +51,7 @@ DOMAINS_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M17.5 12.8v3.4M15.8 14.5h3.4" fill="none" stroke="#F0ABFC" stroke-width="1.3" stroke-linecap="round"/>
 </svg>"""
 
-PGADMIN_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+PHPPGADMIN_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <ellipse cx="11.5" cy="7.5" rx="6.5" ry="2.8" fill="#38BDF8"/>
   <path d="M5 7.5v7.2c0 1.6 2.9 2.8 6.5 2.8s6.5-1.2 6.5-2.8V7.5" fill="none" stroke="#0EA5E9" stroke-width="1.6"/>
   <path d="M5 11.1c0 1.5 2.9 2.8 6.5 2.8s6.5-1.3 6.5-2.8" fill="none" stroke="#7DD3FC" stroke-width="1.3"/>
@@ -91,8 +91,8 @@ def fetch_icon(source: str) -> str:
         return HOSTING_ICON
     if source == "custom:domains":
         return DOMAINS_ICON
-    if source == "custom:pgadmin":
-        return PGADMIN_ICON
+    if source == "custom:phppgadmin":
+        return PHPPGADMIN_ICON
     raise ValueError(f"Unsupported icon source: {source}")
 
 
