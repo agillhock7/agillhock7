@@ -17,7 +17,7 @@
 - Comfortable building backend features with `PHP`, `WordPress`, `MySQL`, and `PostgreSQL`.
 - Linux-first workflow with Git-based delivery.
 
-## Tech Stack
+## Tech Stack Comfort Zone
 ### Frontend
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vue.svg" alt="Vue" /></a>
