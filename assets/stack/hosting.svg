@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="36" role="img" aria-label="Hosting">
+  <title>Hosting</title>
+  <defs>
+    <linearGradient id="grad-hosting" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e4a3f" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="grad-hosting-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="0.5" y="0.5" width="125" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
+    <path d="M44 1 H118 Q125 1 125 8 V28 Q125 35 118 35 H44 Z" fill="url(#grad-hosting)"/>
+    <rect x="1" y="1" width="124" height="11" rx="8" fill="url(#grad-hosting-top)" />
+  </g>
+  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjBBNUZBIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxlbGxpcHNlIGN4PSIxMiIgY3k9IjEyIiByeD0iNC40IiByeT0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzhCREY4IiBzdHJva2Utd2lkdGg9IjEuNiIvPgogIDxwYXRoIGQ9Ik0zIDEyaDE4TTQuOCA4LjJoMTQuNE00LjggMTUuOGgxNC40IiBmaWxsPSJub25lIiBzdHJva2U9IiM5M0M1RkQiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+" />
+  <text
+    x="85.0"
+    y="23"
+    fill="#f1fff9"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.9"
+  >
+    HOSTING
+  </text>
+</svg>

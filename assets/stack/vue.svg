@@ -15,7 +15,7 @@
     <path d="M44 1 H118 Q125 1 125 8 V28 Q125 35 118 35 H44 Z" fill="url(#grad-vue)"/>
     <rect x="1" y="1" width="124" height="11" rx="8" fill="url(#grad-vue-top)" />
   </g>
-  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VnVlLmpzPC90aXRsZT48cGF0aCBkPSJNMjQsMS42MUgxNC4wNkwxMiw1LjE2LDkuOTQsMS42MUgwTDEyLDIyLjM5Wk0xMiwxNC4wOCw1LjE2LDIuMjNIOS41OUwxMiw2LjQxbDIuNDEtNC4xOGg0LjQzWiIvPjwvc3ZnPg==" />
+  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNEZDMDhEIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VnVlLmpzPC90aXRsZT48cGF0aCBkPSJNMjQsMS42MUgxNC4wNkwxMiw1LjE2LDkuOTQsMS42MUgwTDEyLDIyLjM5Wk0xMiwxNC4wOCw1LjE2LDIuMjNIOS41OUwxMiw2LjQxbDIuNDEtNC4xOGg0LjQzWiIvPjwvc3ZnPg==" />
   <text
     x="85.0"
     y="23"

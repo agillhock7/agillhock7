@@ -28,15 +28,22 @@ ICON_ITEMS = [
     ("git", "Git", "simple:git"),
     ("vscode", "VS Code", "url:https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"),
     ("roblox-studio", "Roblox Studio", "simple:robloxstudio"),
+    ("hosting", "Hosting", "custom:hosting"),
 ]
 
 CODEX_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
   <path fill="#ffffff" d="M16.585 10a6.585 6.585 0 1 0-13.17 0 6.585 6.585 0 0 0 13.17 0m-3.252 1.418.135.014a.665.665 0 0 1 0 1.302l-.135.014h-2.5a.665.665 0 0 1 0-1.33zm-5.68 1.008a.665.665 0 0 1-1.14-.685zm1.25-2.768a.66.66 0 0 1 0 .684l-1.25 2.084-.57-.343-.57-.342L7.557 10 6.513 8.259l.57-.342.57-.343zM6.741 7.347a.665.665 0 0 1 .912.227l-1.14.685a.665.665 0 0 1 .228-.912M17.915 10a7.915 7.915 0 1 1-15.83 0 7.915 7.915 0 0 1 15.83 0"/>
 </svg>"""
 
+HOSTING_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="9" fill="none" stroke="#60A5FA" stroke-width="1.8"/>
+  <ellipse cx="12" cy="12" rx="4.4" ry="9" fill="none" stroke="#38BDF8" stroke-width="1.6"/>
+  <path d="M3 12h18M4.8 8.2h14.4M4.8 15.8h14.4" fill="none" stroke="#93C5FD" stroke-width="1.4" stroke-linecap="round"/>
+</svg>"""
+
 
 def fetch_simple_icon(slug: str) -> str:
-    url = f"https://cdn.simpleicons.org/{slug}/white"
+    url = f"https://cdn.simpleicons.org/{slug}"
     req = urllib.request.Request(
         url,
         headers={
@@ -63,6 +70,8 @@ def fetch_icon(source: str) -> str:
         return fetch_simple_icon(source.split(":", 1)[1])
     if source.startswith("url:"):
         return fetch_svg_url(source.split(":", 1)[1])
+    if source == "custom:hosting":
+        return HOSTING_ICON
     raise ValueError(f"Unsupported icon source: {source}")
 
 
