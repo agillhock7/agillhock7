@@ -29,6 +29,7 @@ ICON_ITEMS = [
     ("vscode", "VS Code", "url:https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"),
     ("roblox-studio", "Roblox Studio", "simple:robloxstudio"),
     ("hosting", "Hosting", "custom:hosting"),
+    ("domains", "Domains", "custom:domains"),
 ]
 
 CODEX_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -39,6 +40,13 @@ HOSTING_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <circle cx="12" cy="12" r="9" fill="none" stroke="#60A5FA" stroke-width="1.8"/>
   <ellipse cx="12" cy="12" rx="4.4" ry="9" fill="none" stroke="#38BDF8" stroke-width="1.6"/>
   <path d="M3 12h18M4.8 8.2h14.4M4.8 15.8h14.4" fill="none" stroke="#93C5FD" stroke-width="1.4" stroke-linecap="round"/>
+</svg>"""
+
+DOMAINS_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="#A78BFA" stroke-width="1.7"/>
+  <path d="M7 10h10M7 14h6" fill="none" stroke="#C4B5FD" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="17.5" cy="14.5" r="2.7" fill="none" stroke="#F0ABFC" stroke-width="1.5"/>
+  <path d="M17.5 12.8v3.4M15.8 14.5h3.4" fill="none" stroke="#F0ABFC" stroke-width="1.3" stroke-linecap="round"/>
 </svg>"""
 
 
@@ -72,6 +80,8 @@ def fetch_icon(source: str) -> str:
         return fetch_svg_url(source.split(":", 1)[1])
     if source == "custom:hosting":
         return HOSTING_ICON
+    if source == "custom:domains":
+        return DOMAINS_ICON
     raise ValueError(f"Unsupported icon source: {source}")
 
 

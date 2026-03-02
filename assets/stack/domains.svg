@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="36" role="img" aria-label="Domains">
+  <title>Domains</title>
+  <defs>
+    <linearGradient id="grad-domains" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e4a3f" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="grad-domains-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="0.5" y="0.5" width="125" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
+    <path d="M44 1 H118 Q125 1 125 8 V28 Q125 35 118 35 H44 Z" fill="url(#grad-domains)"/>
+    <rect x="1" y="1" width="124" height="11" rx="8" fill="url(#grad-domains-top)" />
+  </g>
+  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPHJlY3QgeD0iMyIgeT0iNSIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE0IiByeD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTc4QkZBIiBzdHJva2Utd2lkdGg9IjEuNyIvPgogIDxwYXRoIGQ9Ik03IDEwaDEwTTcgMTRoNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRCNUZEIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTcuNSIgY3k9IjE0LjUiIHI9IjIuNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjBBQkZDIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxwYXRoIGQ9Ik0xNy41IDEyLjh2My40TTE1LjggMTQuNWgzLjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0YwQUJGQyIgc3Ryb2tlLXdpZHRoPSIxLjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=" />
+  <text
+    x="85.0"
+    y="23"
+    fill="#f1fff9"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.9"
+  >
+    DOMAINS
+  </text>
+</svg>

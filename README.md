@@ -50,6 +50,7 @@
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vscode.svg" alt="VS Code" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/roblox-studio.svg" alt="Roblox Studio" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/hosting.svg" alt="Hosting" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/domains.svg" alt="Domains" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/codex.svg" alt="Codex" /></a>
 </p>
 
