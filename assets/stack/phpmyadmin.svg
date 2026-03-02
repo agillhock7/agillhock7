@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="36" role="img" aria-label="phpMyAdmin">
+  <title>phpMyAdmin</title>
+  <defs>
+    <linearGradient id="grad-phpmyadmin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e4a3f" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="grad-phpmyadmin-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="0.5" y="0.5" width="151" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
+    <path d="M44 1 H144 Q151 1 151 8 V28 Q151 35 144 35 H44 Z" fill="url(#grad-phpmyadmin)"/>
+    <rect x="1" y="1" width="150" height="11" rx="8" fill="url(#grad-phpmyadmin-top)" />
+  </g>
+  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM3OEFGIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+cGhwTXlBZG1pbjwvdGl0bGU+PHBhdGggZD0iTTUuNDYzIDMuNDc2QzYuNjkgNS4yMjUgNy40OTcgNy4zOTkgNy42OCA5Ljc5OGExMi45IDEyLjkgMCAwIDEtLjY3MiA1LjI1NCA0LjI5IDQuMjkgMCAwIDEgMi45NjktMS41MjNjLjA1LS4wMDQuMDk5LS4wMDYuMTQ4LS4wMDguMDgtLjQ5MS40Ny0zLjQ1LS45NzctNi42OC0xLjA2OC0yLjM4Ni0zLTMuMTYtMy42ODUtMy4zNjVabTEuNzc3LjAzN3MyLjQwNiAxLjA2NiAzLjMyNiA1LjU0N2MuNjA3IDIuOTU1LjA0OSA0LjgzNi0uNDAyIDUuNzczYTcuMzQ3IDcuMzQ3IDAgMCAxIDQuNTA2LTEuOTk0Yy44Ni0uMDY1IDEuNjk1LjAyIDIuNDgyLjIzMy0uMS0uNzQxLS41OTMtMy40MTQtMi43MzItNS45Mi0zLjI2My0zLjgyMy03LjE4LTMuNjQtNy4xOC0zLjY0Wm0xNC44MTcgOS43MDEtMTcuOTIgMy4wNDlhMi4yODQgMi4yODQgMCAwIDEgMS41MzUgMi4yNTQgMi4zMSAyLjMxIDAgMCAxLS4xMDYuNjFjLjA1NS0uMDI3IDIuNjg5LTEuMjc1IDYuMzQyLTIuMDM0IDMuMjM4LS42NzMgNS43MjMtLjM2IDYuMjg1LS4yNzNhNi40NiA2LjQ2IDAgMCAxIDMuODY0LTMuNjA2em0tNi4yMTMgNC4wNzhjLTIuMzE4IDAtNC42NDEuNDk1LTYuNjE0IDEuMTY2LTIuODY4Ljk3Ni0yLjk1MSAxLjM0OC01LjU1IDEuMDQzQzEuODQ0IDE5LjI4NiAwIDE4LjM4NiAwIDE4LjM4NnMyLjQwNiAxLjk3IDQuOTE0IDIuMTI3YzEuOTg2LjEyNSAzLjUwNS0uODIyIDUuMzE1LTEuNDE0IDIuNjYxLS44NzEgNC41MTEtLjk3IDYuMjUzLS45NzVDMTkuMzYxIDE4LjExNiAyNCAxOS4zNTMgMjQgMTkuMzUzcy0yLjExLTEuMDQ0LTUuMDMzLTEuNzJhMTMuODg1IDEzLjg4NSAwIDAgMC0zLjEyMy0uMzRaIi8+PC9zdmc+" />
+  <text
+    x="98.0"
+    y="23"
+    fill="#f1fff9"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.9"
+  >
+    PHPMYADMIN
+  </text>
+</svg>

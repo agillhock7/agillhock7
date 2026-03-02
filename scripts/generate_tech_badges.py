@@ -22,6 +22,8 @@ ICON_ITEMS = [
     ("cpanel", "cPanel", "simple:cpanel"),
     ("mysql", "MySQL", "simple:mysql"),
     ("postgresql", "PostgreSQL", "simple:postgresql"),
+    ("phpmyadmin", "phpMyAdmin", "simple:phpmyadmin"),
+    ("pgadmin", "pgAdmin", "custom:pgadmin"),
     ("linux", "Linux", "simple:linux"),
     ("ubuntu", "Ubuntu", "simple:ubuntu"),
     ("ssl-tls", "SSL/TLS", "simple:letsencrypt"),
@@ -47,6 +49,13 @@ DOMAINS_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M7 10h10M7 14h6" fill="none" stroke="#C4B5FD" stroke-width="1.5" stroke-linecap="round"/>
   <circle cx="17.5" cy="14.5" r="2.7" fill="none" stroke="#F0ABFC" stroke-width="1.5"/>
   <path d="M17.5 12.8v3.4M15.8 14.5h3.4" fill="none" stroke="#F0ABFC" stroke-width="1.3" stroke-linecap="round"/>
+</svg>"""
+
+PGADMIN_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <ellipse cx="11.5" cy="7.5" rx="6.5" ry="2.8" fill="#38BDF8"/>
+  <path d="M5 7.5v7.2c0 1.6 2.9 2.8 6.5 2.8s6.5-1.2 6.5-2.8V7.5" fill="none" stroke="#0EA5E9" stroke-width="1.6"/>
+  <path d="M5 11.1c0 1.5 2.9 2.8 6.5 2.8s6.5-1.3 6.5-2.8" fill="none" stroke="#7DD3FC" stroke-width="1.3"/>
+  <path d="M16.8 13.4l2.2 2.2 3-3" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>"""
 
 
@@ -82,6 +91,8 @@ def fetch_icon(source: str) -> str:
         return HOSTING_ICON
     if source == "custom:domains":
         return DOMAINS_ICON
+    if source == "custom:pgadmin":
+        return PGADMIN_ICON
     raise ValueError(f"Unsupported icon source: {source}")
 
 
