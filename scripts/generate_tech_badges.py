@@ -77,6 +77,10 @@ def build_badge(label: str, icon_uri: str, gradient_id: str) -> str:
     total_width = icon_panel_width + label_panel_width
     height = 36
     text_x = icon_panel_width + (label_panel_width / 2)
+    right_edge = total_width - 1
+    bottom_edge = height - 1
+    right_corner_start = total_width - 8
+    bottom_corner_start = height - 8
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{height}" role="img" aria-label="{label}">
   <title>{label}</title>
@@ -89,14 +93,11 @@ def build_badge(label: str, icon_uri: str, gradient_id: str) -> str:
       <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
-    <clipPath id="{gradient_id}-outer-clip">
-      <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="8" />
-    </clipPath>
   </defs>
-  <g shape-rendering="geometricPrecision">
+  <g>
     <rect x="0.5" y="0.5" width="{total_width - 1}" height="{height - 1}" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
-    <rect x="{icon_panel_width}" y="1" width="{label_panel_width - 1}" height="{height - 2}" rx="7" fill="url(#{gradient_id})"/>
-    <rect x="1" y="1" width="{total_width - 2}" height="11" fill="url(#{gradient_id}-top)" clip-path="url(#{gradient_id}-outer-clip)" />
+    <path d="M{icon_panel_width} 1 H{right_corner_start} Q{right_edge} 1 {right_edge} 8 V{bottom_corner_start} Q{right_edge} {bottom_edge} {right_corner_start} {bottom_edge} H{icon_panel_width} Z" fill="url(#{gradient_id})"/>
+    <rect x="1" y="1" width="{total_width - 2}" height="11" rx="8" fill="url(#{gradient_id}-top)" />
   </g>
   <image x="11" y="7" width="22" height="22" href="{icon_uri}" />
   <text

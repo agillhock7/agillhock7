@@ -9,14 +9,11 @@
       <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
-    <clipPath id="grad-vue-outer-clip">
-      <rect x="0.5" y="0.5" width="125" height="35" rx="8" />
-    </clipPath>
   </defs>
-  <g shape-rendering="geometricPrecision">
+  <g>
     <rect x="0.5" y="0.5" width="125" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
-    <rect x="44" y="1" width="81" height="34" rx="7" fill="url(#grad-vue)"/>
-    <rect x="1" y="1" width="124" height="11" fill="url(#grad-vue-top)" clip-path="url(#grad-vue-outer-clip)" />
+    <path d="M44 1 H118 Q125 1 125 8 V28 Q125 35 118 35 H44 Z" fill="url(#grad-vue)"/>
+    <rect x="1" y="1" width="124" height="11" rx="8" fill="url(#grad-vue-top)" />
   </g>
   <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VnVlLmpzPC90aXRsZT48cGF0aCBkPSJNMjQsMS42MUgxNC4wNkwxMiw1LjE2LDkuOTQsMS42MUgwTDEyLDIyLjM5Wk0xMiwxNC4wOCw1LjE2LDIuMjNIOS41OUwxMiw2LjQxbDIuNDEtNC4xOGg0LjQzWiIvPjwvc3ZnPg==" />
   <text

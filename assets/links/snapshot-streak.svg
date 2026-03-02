@@ -10,10 +10,10 @@
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
   </defs>
-  <g shape-rendering="geometricPrecision">
+  <g>
     <rect x="0.5" y="0.5" width="127" height="31" rx="7" fill="#0f1b19" stroke="#2f5b4f" />
     <rect x="1" y="1" width="126" height="30" rx="6" fill="url(#grad-snapshot-streak)" />
-    <path d="M1 1 H127 V11 H1 Z" fill="url(#grad-snapshot-streak-shine)" />
+    <rect x="1" y="1" width="126" height="10" rx="6" fill="url(#grad-snapshot-streak-shine)" />
   </g>
   <text
     x="64.0"

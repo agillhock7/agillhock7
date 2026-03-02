@@ -206,10 +206,10 @@ def build_badge_svg(label: str, gradient_id: str) -> str:
       <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
     </linearGradient>
   </defs>
-  <g shape-rendering="geometricPrecision">
+  <g>
     <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="7" fill="#0f1b19" stroke="#2f5b4f" />
     <rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="6" fill="url(#{gradient_id})" />
-    <path d="M1 1 H{width - 1} V11 H1 Z" fill="url(#{gradient_id}-shine)" />
+    <rect x="1" y="1" width="{width - 2}" height="10" rx="6" fill="url(#{gradient_id}-shine)" />
   </g>
   <text
     x="{width / 2}"
