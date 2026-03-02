@@ -6,15 +6,32 @@ from __future__ import annotations
 import json
 import os
 import re
+from io import BytesIO
+from pathlib import Path
+from typing import Any
 import urllib.parse
 import urllib.request
-from pathlib import Path
+
+try:
+    from PIL import Image, ImageStat
+except ModuleNotFoundError:
+    Image = None
+    ImageStat = None
 
 
 GITHUB_USER = os.getenv("GITHUB_USER", "agillhock7")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 README_FILE = Path("README.md")
 LINKS_DIR = Path("assets/links")
+PREVIEWS_DIR = Path("assets/previews")
+
+PREVIEW_WIDTH = 1200
+PREVIEW_HEIGHT = 720
+THUM_WAIT_PRIMARY = 12000
+THUM_WAIT_SECONDARY = 18000
+MIN_PREVIEW_BYTES = 12000
+MAX_WHITE_RATIO = 0.86
+MIN_PIXEL_STDDEV = 9.0
 
 FEATURED_PROJECTS = [
     {
@@ -74,6 +91,105 @@ def api_get(url: str) -> dict | list:
         return json.load(resp)
 
 
+def http_get_bytes(url: str) -> bytes:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "custom-profile-featured-generator",
+            "Accept": "image/*,*/*;q=0.8",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.read()
+
+
+def preview_candidates(homepage: str) -> list[str]:
+    encoded_relaxed = urllib.parse.quote(homepage, safe=":/?&=%#")
+    encoded_strict = urllib.parse.quote(homepage, safe="")
+    return [
+        (
+            "https://image.thum.io/get/"
+            f"width/{PREVIEW_WIDTH}/crop/{PREVIEW_HEIGHT}/wait/{THUM_WAIT_PRIMARY}/noanimate/{encoded_relaxed}"
+        ),
+        (
+            "https://image.thum.io/get/"
+            f"width/{PREVIEW_WIDTH}/crop/{PREVIEW_HEIGHT}/wait/{THUM_WAIT_SECONDARY}/noanimate/{encoded_relaxed}"
+        ),
+        f"https://s.wordpress.com/mshots/v1/{encoded_strict}?w={PREVIEW_WIDTH}",
+    ]
+
+
+def default_preview_url(homepage: str) -> str:
+    return preview_candidates(homepage)[0]
+
+
+def is_washed_preview(image_bytes: bytes) -> bool:
+    if len(image_bytes) < MIN_PREVIEW_BYTES:
+        return True
+
+    if Image is None or ImageStat is None:
+        return False
+
+    try:
+        with Image.open(BytesIO(image_bytes)) as image:
+            sample = image.convert("RGB")
+            sample.thumbnail((220, 132))
+            grayscale = sample.convert("L")
+            histogram = grayscale.histogram()
+            total_pixels = sum(histogram)
+            if not total_pixels:
+                return True
+
+            white_pixels = sum(histogram[243:])
+            white_ratio = white_pixels / total_pixels
+            pixel_stddev = ImageStat.Stat(grayscale).stddev[0]
+
+            return white_ratio > MAX_WHITE_RATIO or pixel_stddev < MIN_PIXEL_STDDEV
+    except Exception:
+        return False
+
+
+def write_preview_image(destination: Path, image_bytes: bytes) -> None:
+    if Image is None:
+        destination.write_bytes(image_bytes)
+        return
+
+    try:
+        with Image.open(BytesIO(image_bytes)) as image:
+            image.convert("RGB").save(destination, format="PNG", optimize=True)
+    except Exception:
+        destination.write_bytes(image_bytes)
+
+
+def capture_preview(homepage: str, slug: str) -> str:
+    PREVIEWS_DIR.mkdir(parents=True, exist_ok=True)
+    destination = PREVIEWS_DIR / f"{slug}.png"
+    fallback_bytes: bytes | None = None
+
+    for source_url in preview_candidates(homepage):
+        try:
+            image_bytes = http_get_bytes(source_url)
+        except Exception:
+            continue
+
+        if len(image_bytes) >= MIN_PREVIEW_BYTES and (
+            fallback_bytes is None or len(image_bytes) > len(fallback_bytes)
+        ):
+            fallback_bytes = image_bytes
+
+        if is_washed_preview(image_bytes):
+            continue
+
+        write_preview_image(destination, image_bytes)
+        return destination.as_posix()
+
+    if fallback_bytes:
+        write_preview_image(destination, fallback_bytes)
+        return destination.as_posix()
+
+    return default_preview_url(homepage)
+
+
 def build_badge_svg(label: str, gradient_id: str) -> str:
     text = label.upper()
     width = max(128, int(len(text) * 8.4) + 32)
@@ -131,8 +247,8 @@ def normalize_homepage(homepage: str) -> str:
     return f"https://{value}"
 
 
-def build_project_data() -> list[dict]:
-    items: list[dict] = []
+def build_project_data() -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
     for project in FEATURED_PROJECTS:
         repo = project["repo"]
         data = api_get(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
@@ -152,7 +268,7 @@ def build_project_data() -> list[dict]:
     return items
 
 
-def build_featured_table(projects: list[dict]) -> str:
+def build_featured_table(projects: list[dict[str, Any]]) -> str:
     lines = [
         "| Project | Summary |",
         "| --- | --- |",
@@ -167,13 +283,11 @@ def build_featured_table(projects: list[dict]) -> str:
 def build_snapshot_links() -> str:
     chips = []
     for key, label, url in SNAPSHOT_LINKS:
-        chips.append(
-            f'<a href="{url}"><img src="assets/links/{key}.svg" alt="{label}" /></a>'
-        )
+        chips.append(f'<a href="{url}"><img src="assets/links/{key}.svg" alt="{label}" /></a>')
     return '<p align="center">\n  ' + "\n  ".join(chips) + "\n</p>"
 
 
-def build_live_previews(projects: list[dict]) -> str:
+def build_live_previews(projects: list[dict[str, Any]]) -> str:
     live_projects = [p for p in projects if p["homepage"]]
     if not live_projects:
         return '<p align="center">Live production previews will appear here when project homepages are configured.</p>'
@@ -181,10 +295,7 @@ def build_live_previews(projects: list[dict]) -> str:
     cells: list[str] = []
     for project in live_projects:
         homepage = project["homepage"]
-        encoded = urllib.parse.quote(homepage, safe=":/?&=%#")
-        screenshot_url = (
-            f"https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/{encoded}"
-        )
+        screenshot_url = str(project.get("preview_src", default_preview_url(homepage)))
         live_badge = f'assets/links/live-{project["slug"]}.svg'
         cell = (
             '    <td align="center" width="33%">\n'
@@ -206,11 +317,20 @@ def build_live_previews(projects: list[dict]) -> str:
 
 def main() -> None:
     LINKS_DIR.mkdir(parents=True, exist_ok=True)
+    PREVIEWS_DIR.mkdir(parents=True, exist_ok=True)
+
+    for existing_preview in PREVIEWS_DIR.glob("*.jpg"):
+        existing_preview.unlink()
+    for existing_preview in PREVIEWS_DIR.glob("*.png"):
+        existing_preview.unlink()
+
     projects = build_project_data()
 
     for project in projects:
         write_badge(LINKS_DIR / f'project-{project["slug"]}.svg', project["repo"])
         write_badge(LINKS_DIR / f'live-{project["slug"]}.svg', f'Visit {project["repo"]}')
+        if project["homepage"]:
+            project["preview_src"] = capture_preview(project["homepage"], project["slug"])
 
     for key, label, _ in SNAPSHOT_LINKS:
         write_badge(LINKS_DIR / f"{key}.svg", label)

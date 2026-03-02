@@ -47,6 +47,8 @@
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ubuntu.svg" alt="Ubuntu" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ssl-tls.svg" alt="SSL/TLS" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/git.svg" alt="Git" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vscode.svg" alt="VS Code" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/roblox-studio.svg" alt="Roblox Studio" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/codex.svg" alt="Codex" /></a>
 </p>
 
@@ -73,29 +75,29 @@
   <tbody>
   <tr>
     <td align="center" width="33%">
-      <a href="https://onledge.gops.app"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://onledge.gops.app" alt="OnLedge live preview" width="100%" /></a><br/>
+      <a href="https://onledge.gops.app"><img src="assets/previews/onledge.png" alt="OnLedge live preview" width="100%" /></a><br/>
       <a href="https://onledge.gops.app"><img src="assets/links/live-onledge.svg" alt="Visit OnLedge" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://em.gops.app"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://em.gops.app" alt="EveryMile live preview" width="100%" /></a><br/>
+      <a href="https://em.gops.app"><img src="assets/previews/everymile.png" alt="EveryMile live preview" width="100%" /></a><br/>
       <a href="https://em.gops.app"><img src="assets/links/live-everymile.svg" alt="Visit EveryMile" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://my.alexanderjgill.com"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://my.alexanderjgill.com" alt="MySite live preview" width="100%" /></a><br/>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png" alt="MySite live preview" width="100%" /></a><br/>
       <a href="https://my.alexanderjgill.com"><img src="assets/links/live-mysite.svg" alt="Visit MySite" /></a>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://snap.pucc.us/"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://snap.pucc.us/" alt="Slapshot-Snapshot live preview" width="100%" /></a><br/>
+      <a href="https://snap.pucc.us/"><img src="assets/previews/slapshot-snapshot.png" alt="Slapshot-Snapshot live preview" width="100%" /></a><br/>
       <a href="https://snap.pucc.us/"><img src="assets/links/live-slapshot-snapshot.svg" alt="Visit Slapshot-Snapshot" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://tb4.alexander.quest/"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://tb4.alexander.quest/" alt="parcel-tracker live preview" width="100%" /></a><br/>
+      <a href="https://tb4.alexander.quest/"><img src="assets/previews/parcel-tracker.png" alt="parcel-tracker live preview" width="100%" /></a><br/>
       <a href="https://tb4.alexander.quest/"><img src="assets/links/live-parcel-tracker.svg" alt="Visit parcel-tracker" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://fab.gops.app"><img src="https://image.thum.io/get/width/1200/crop/720/wait/5000/noanimate/https://fab.gops.app" alt="feedabum live preview" width="100%" /></a><br/>
+      <a href="https://fab.gops.app"><img src="assets/previews/feedabum.png" alt="feedabum live preview" width="100%" /></a><br/>
       <a href="https://fab.gops.app"><img src="assets/links/live-feedabum.svg" alt="Visit feedabum" /></a>
     </td>
   </tr>

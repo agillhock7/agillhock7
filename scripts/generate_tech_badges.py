@@ -10,22 +10,24 @@ from pathlib import Path
 
 OUTDIR = Path("assets/stack")
 
-SIMPLE_ICON_ITEMS = [
-    ("vue", "Vue", "vuedotjs"),
-    ("vite", "Vite", "vite"),
-    ("typescript", "TypeScript", "typescript"),
-    ("javascript", "JavaScript", "javascript"),
-    ("lua", "Lua", "lua"),
-    ("php", "PHP", "php"),
-    ("wordpress", "WordPress", "wordpress"),
-    ("apache", "Apache", "apache"),
-    ("cpanel", "cPanel", "cpanel"),
-    ("mysql", "MySQL", "mysql"),
-    ("postgresql", "PostgreSQL", "postgresql"),
-    ("linux", "Linux", "linux"),
-    ("ubuntu", "Ubuntu", "ubuntu"),
-    ("ssl-tls", "SSL/TLS", "letsencrypt"),
-    ("git", "Git", "git"),
+ICON_ITEMS = [
+    ("vue", "Vue", "simple:vuedotjs"),
+    ("vite", "Vite", "simple:vite"),
+    ("typescript", "TypeScript", "simple:typescript"),
+    ("javascript", "JavaScript", "simple:javascript"),
+    ("lua", "Lua", "simple:lua"),
+    ("php", "PHP", "simple:php"),
+    ("wordpress", "WordPress", "simple:wordpress"),
+    ("apache", "Apache", "simple:apache"),
+    ("cpanel", "cPanel", "simple:cpanel"),
+    ("mysql", "MySQL", "simple:mysql"),
+    ("postgresql", "PostgreSQL", "simple:postgresql"),
+    ("linux", "Linux", "simple:linux"),
+    ("ubuntu", "Ubuntu", "simple:ubuntu"),
+    ("ssl-tls", "SSL/TLS", "simple:letsencrypt"),
+    ("git", "Git", "simple:git"),
+    ("vscode", "VS Code", "url:https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"),
+    ("roblox-studio", "Roblox Studio", "simple:robloxstudio"),
 ]
 
 CODEX_ICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -43,6 +45,25 @@ def fetch_simple_icon(slug: str) -> str:
     )
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8")
+
+
+def fetch_svg_url(url: str) -> str:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "custom-profile-tech-badge-generator",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.read().decode("utf-8")
+
+
+def fetch_icon(source: str) -> str:
+    if source.startswith("simple:"):
+        return fetch_simple_icon(source.split(":", 1)[1])
+    if source.startswith("url:"):
+        return fetch_svg_url(source.split(":", 1)[1])
+    raise ValueError(f"Unsupported icon source: {source}")
 
 
 def to_data_uri(svg_source: str) -> str:
@@ -94,8 +115,8 @@ def build_badge(label: str, icon_uri: str, gradient_id: str) -> str:
 def main() -> None:
     OUTDIR.mkdir(parents=True, exist_ok=True)
 
-    for filename, label, slug in SIMPLE_ICON_ITEMS:
-        icon_svg = fetch_simple_icon(slug)
+    for filename, label, icon_source in ICON_ITEMS:
+        icon_svg = fetch_icon(icon_source)
         icon_uri = to_data_uri(icon_svg)
         badge_svg = build_badge(label, icon_uri, f"grad-{filename}")
         (OUTDIR / f"{filename}.svg").write_text(badge_svg, encoding="utf-8")

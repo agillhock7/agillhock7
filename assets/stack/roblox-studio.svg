@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="177" height="36" role="img" aria-label="Roblox Studio">
+  <title>Roblox Studio</title>
+  <defs>
+    <linearGradient id="grad-roblox-studio" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e4a3f" />
+      <stop offset="100%" stop-color="#8ccfaf" />
+    </linearGradient>
+    <linearGradient id="grad-roblox-studio-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9fff0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d9fff0" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g shape-rendering="geometricPrecision">
+    <rect x="0.5" y="0.5" width="176" height="35" rx="8" fill="#0f1a18" stroke="#2b4c44"/>
+    <rect x="44" y="1" width="132" height="34" rx="7" fill="url(#grad-roblox-studio)"/>
+    <path d="M1 1 H176 V12 H1 Z" fill="url(#grad-roblox-studio-top)" rx="8"/>
+  </g>
+  <image x="11" y="7" width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Um9ibG94IFN0dWRpbzwvdGl0bGU+PHBhdGggZD0iTSAxMy45MzYgMTUuMzU2IEwgMS44MjYgMTIuMTEyIEwgMCAxOC45MyBMIDE4LjkyOCAyNCBMIDIxLjYwOCAxNC4wMSBMIDE0Ljc5IDEyLjE4IEwgMTMuOTM2IDE1LjM1NiBaIE0gNS4wNzIgMCBMIDIuMzk0IDkuOTkyIEwgOS4yMSAxMS44MjIgTCAxMC4wNjQgOC42NDQgTCAyMi4xNzQgMTEuODkgTCAyNCA1LjA3MiBMIDUuMDcyIDAgWiIvPjwvc3ZnPg==" />
+  <text
+    x="110.5"
+    y="23"
+    fill="#f1fff9"
+    text-anchor="middle"
+    font-family="Verdana,Geneva,DejaVu Sans,sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.9"
+  >
+    ROBLOX STUDIO
+  </text>
+</svg>
