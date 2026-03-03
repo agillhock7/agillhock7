@@ -8,15 +8,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=8CCAAF&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
 </p>
 
-## About
-- Full-stack developer focused on clean, reliable web products.
-- Previously built, tested, and ran aerospace propulsion systems; now I bring that same systems rigor into software.
-- USA Hockey coach focused on player development, fundamentals, and team culture.
-- Proud dad; family keeps me grounded and moving with purpose.
-- Strong in modern UI work with `Vue`, `Vite`, `TypeScript`, `JavaScript`, and `Lua`.
-- Comfortable building backend features with `PHP`, `WordPress`, `MySQL`, and `PostgreSQL`.
-- Linux-first workflow with Git-based delivery.
-
 ## Tech Stack Comfort Zone
 ### Frontend
 <p>
