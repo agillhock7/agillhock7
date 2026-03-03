@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="assets/header.svg?v=202603030213" alt="Header" />
+    <img src="assets/header.svg?v=202603030345" alt="Header" />
   </a>
 </p>
 
@@ -112,24 +112,24 @@
 ## GitHub Snapshot
 <!-- SNAPSHOT_LINKS:START -->
 <p align="center">
-  <a href="assets/github-stats.svg?v=202603030213"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
-  <a href="assets/top-langs.svg?v=202603030213"><img src="assets/links/snapshot-langs.svg" alt="Top Languages" /></a>
-  <a href="assets/streak.svg?v=202603030213"><img src="assets/links/snapshot-streak.svg" alt="Streak" /></a>
-  <a href="assets/activity-graph.svg?v=202603030213"><img src="assets/links/snapshot-activity.svg" alt="Activity Graph" /></a>
+  <a href="assets/github-stats.svg?v=202603030345"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
+  <a href="assets/top-langs.svg?v=202603030345"><img src="assets/links/snapshot-langs.svg" alt="Top Languages" /></a>
+  <a href="assets/streak.svg?v=202603030345"><img src="assets/links/snapshot-streak.svg" alt="Streak" /></a>
+  <a href="assets/activity-graph.svg?v=202603030345"><img src="assets/links/snapshot-activity.svg" alt="Activity Graph" /></a>
 </p>
 <!-- SNAPSHOT_LINKS:END -->
 
 <p align="center">
-  <img height="170" src="assets/github-stats.svg?v=202603030213" alt="GitHub stats" />
-  <img height="170" src="assets/top-langs.svg?v=202603030213" alt="Top languages" />
+  <img height="170" src="assets/github-stats.svg?v=202603030345" alt="GitHub stats" />
+  <img height="170" src="assets/top-langs.svg?v=202603030345" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="assets/streak.svg?v=202603030213" alt="Streak stats" />
+  <img src="assets/streak.svg?v=202603030345" alt="Streak stats" />
 </p>
 
 <p align="center">
-  <img src="assets/activity-graph.svg?v=202603030213" alt="Activity graph" />
+  <img src="assets/activity-graph.svg?v=202603030345" alt="Activity graph" />
 </p>
 
 <p align="center">

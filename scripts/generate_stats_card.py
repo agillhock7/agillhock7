@@ -62,6 +62,7 @@ def main() -> None:
     prs_info = api_get(f"https://api.github.com/search/issues?q={prs_query}")
     issues_info = api_get(f"https://api.github.com/search/issues?q={issues_query}")
 
+    public_repos = int(user_info.get("public_repos", 0))
     public_nonfork_repos = sum(1 for r in repos if not r.get("fork"))
     total_stars = sum(int(r.get("stargazers_count", 0)) for r in repos)
     total_forks = sum(int(r.get("forks_count", 0)) for r in repos)
@@ -78,7 +79,8 @@ def main() -> None:
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     lines = [
-        ("Public Repos", public_nonfork_repos),
+        ("Public Repos", public_repos),
+        ("Original Repos", public_nonfork_repos),
         ("Total Stars", total_stars),
         ("Total Forks", total_forks),
         ("Followers", followers),
@@ -90,7 +92,7 @@ def main() -> None:
 
     svg_lines = []
     y_start = 62
-    y_step = 20
+    y_step = 17
     for idx, (label, value) in enumerate(lines):
         y = y_start + idx * y_step
         svg_lines.append(

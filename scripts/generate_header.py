@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import os
-import re
 import urllib.request
 from pathlib import Path
 
@@ -39,23 +38,6 @@ def fetch_repos(user: str) -> list[dict]:
         repos.extend(batch)
         page += 1
     return repos
-
-
-def fetch_profile_views(user: str) -> int:
-    url = f"https://komarev.com/ghpvc/?username={user}&label=Profile%20Views&style=flat"
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "custom-profile-header-generator"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        svg = resp.read().decode("utf-8")
-
-    matches = re.findall(r'<text[^>]*y="14">([^<]+)</text>', svg)
-    for text in reversed(matches):
-        value = text.replace(",", "").strip()
-        if value.isdigit():
-            return int(value)
-    return 0
 
 
 def fmt(n: int) -> str:
@@ -110,11 +92,11 @@ def chip_svg(x: int, y: int, label: str, value: str, icon: str) -> tuple[str, in
     return svg, total_w
 
 
-def build_svg(name: str, slogan: str, views: int, followers: int, stars: int) -> str:
+def build_svg(name: str, slogan: str, public_repos: int, followers: int, stars: int) -> str:
     width = 1200
     height = max(180, HEADER_HEIGHT)
     chips = [
-        ("Profile Views", fmt(views), "eye"),
+        ("Public Repos", fmt(public_repos), "eye"),
         ("Followers", fmt(followers), "users"),
         ("Stars", fmt(stars), "star"),
     ]
@@ -228,12 +210,13 @@ def main() -> None:
     repos = fetch_repos(GITHUB_USER)
 
     followers = 0
+    public_repos = 0
     if isinstance(user_info, dict):
         followers = int(user_info.get("followers", 0))
+        public_repos = int(user_info.get("public_repos", 0))
     stars = sum(int(r.get("stargazers_count", 0)) for r in repos if isinstance(r, dict))
-    views = fetch_profile_views(GITHUB_USER)
 
-    svg = build_svg("Alexander Gill", "Moving Forward", views, followers, stars)
+    svg = build_svg("Alexander Gill", "Moving Forward", public_repos, followers, stars)
     OUTFILE.parent.mkdir(parents=True, exist_ok=True)
     OUTFILE.write_text(svg, encoding="utf-8")
 

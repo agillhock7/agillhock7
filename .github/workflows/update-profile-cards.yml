@@ -14,7 +14,7 @@ on:
       - "scripts/generate_featured_content.py"
       - "scripts/update_readme_cache_bust.py"
   schedule:
-    - cron: "23 */6 * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
