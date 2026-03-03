@@ -55,9 +55,10 @@ jobs:
 
       - name: Download remaining cards
         run: |
-          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=agillhock7&theme=github_dark" -o assets/top-langs.svg
-          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" -o assets/streak.svg
-          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0b1220&color=8ccfaf&line=22c55e&point=9be9a8&area=true&area_color=1f5f4a&hide_border=true&custom_title=Contribution%20Activity&radius=8" -o assets/activity-graph.svg
+          CACHE_BUST="$(date -u +%Y%m%d%H%M)"
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=agillhock7&theme=github_dark&v=${CACHE_BUST}" -o assets/top-langs.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e&v=${CACHE_BUST}" -o assets/streak.svg
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0b1220&color=8ccfaf&line=22c55e&point=9be9a8&area=true&area_color=1f5f4a&hide_border=true&custom_title=Contribution%20Activity&radius=8&v=${CACHE_BUST}" -o assets/activity-graph.svg
 
       - name: Update README cache bust query params
         run: python3 scripts/update_readme_cache_bust.py

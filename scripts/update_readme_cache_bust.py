@@ -25,6 +25,13 @@ def update_asset_versions(text: str) -> str:
     for asset in ASSETS:
         pattern = re.compile(re.escape(asset) + r"(?:\?v=\d+)?")
         updated = pattern.sub(f"{asset}?v={VERSION}", updated)
+
+    # Refresh live preview screenshots by cache-busting their local asset URLs.
+    preview_pattern = re.compile(r"assets/previews/[a-z0-9._/-]+\.(?:png|jpg)(?:\?v=\d+)?", re.I)
+    updated = preview_pattern.sub(
+        lambda m: f"{m.group(0).split('?')[0]}?v={VERSION}",
+        updated,
+    )
     return updated
 
 
