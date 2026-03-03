@@ -47,11 +47,6 @@
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/codex.svg" alt="Codex" /></a>
 </p>
 
-## Current Focus
-- Building fast, maintainable front ends.
-- Improving API and database design discipline.
-- Making steady progress with tighter DevOps habits.
-
 ## Featured Projects
 <!-- FEATURED_TABLE:START -->
 | Project | Summary |
