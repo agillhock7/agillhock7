@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="assets/header.svg?v=202603080558" alt="Header" />
+    <img src="assets/header.svg?v=202603080701" alt="Header" />
   </a>
 </p>
 
@@ -65,29 +65,29 @@
   <tbody>
   <tr>
     <td align="center" width="33%">
-      <a href="https://onledge.gops.app"><img src="assets/previews/onledge.png?v=202603080558" alt="OnLedge live preview" width="100%" /></a><br/>
+      <a href="https://onledge.gops.app"><img src="assets/previews/onledge.png?v=202603080701" alt="OnLedge live preview" width="100%" /></a><br/>
       <a href="https://onledge.gops.app"><img src="assets/links/live-onledge.svg" alt="Visit OnLedge" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=202603080558" alt="EveryMile live preview" width="100%" /></a><br/>
+      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=202603080701" alt="EveryMile live preview" width="100%" /></a><br/>
       <a href="https://em.gops.app"><img src="assets/links/live-everymile.svg" alt="Visit EveryMile" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=202603080558" alt="MySite live preview" width="100%" /></a><br/>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=202603080701" alt="MySite live preview" width="100%" /></a><br/>
       <a href="https://my.alexanderjgill.com"><img src="assets/links/live-mysite.svg" alt="Visit MySite" /></a>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://snap.pucc.us/"><img src="assets/previews/slapshot-snapshot.png?v=202603080558" alt="Slapshot-Snapshot live preview" width="100%" /></a><br/>
+      <a href="https://snap.pucc.us/"><img src="assets/previews/slapshot-snapshot.png?v=202603080701" alt="Slapshot-Snapshot live preview" width="100%" /></a><br/>
       <a href="https://snap.pucc.us/"><img src="assets/links/live-slapshot-snapshot.svg" alt="Visit Slapshot-Snapshot" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://tb4.alexander.quest/"><img src="assets/previews/parcel-tracker.png?v=202603080558" alt="parcel-tracker live preview" width="100%" /></a><br/>
+      <a href="https://tb4.alexander.quest/"><img src="assets/previews/parcel-tracker.png?v=202603080701" alt="parcel-tracker live preview" width="100%" /></a><br/>
       <a href="https://tb4.alexander.quest/"><img src="assets/links/live-parcel-tracker.svg" alt="Visit parcel-tracker" /></a>
     </td>
     <td align="center" width="33%">
-      <a href="https://fab.gops.app"><img src="assets/previews/feedabum.png?v=202603080558" alt="feedabum live preview" width="100%" /></a><br/>
+      <a href="https://fab.gops.app"><img src="assets/previews/feedabum.png?v=202603080701" alt="feedabum live preview" width="100%" /></a><br/>
       <a href="https://fab.gops.app"><img src="assets/links/live-feedabum.svg" alt="Visit feedabum" /></a>
     </td>
   </tr>
@@ -98,24 +98,24 @@
 ## GitHub Snapshot
 <!-- SNAPSHOT_LINKS:START -->
 <p align="center">
-  <a href="assets/github-stats.svg?v=202603080558"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
-  <a href="assets/top-langs.svg?v=202603080558"><img src="assets/links/snapshot-langs.svg" alt="Top Languages" /></a>
-  <a href="assets/streak.svg?v=202603080558"><img src="assets/links/snapshot-streak.svg" alt="Streak" /></a>
-  <a href="assets/activity-graph.svg?v=202603080558"><img src="assets/links/snapshot-activity.svg" alt="Activity Graph" /></a>
+  <a href="assets/github-stats.svg?v=202603080701"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
+  <a href="assets/top-langs.svg?v=202603080701"><img src="assets/links/snapshot-langs.svg" alt="Top Languages" /></a>
+  <a href="assets/streak.svg?v=202603080701"><img src="assets/links/snapshot-streak.svg" alt="Streak" /></a>
+  <a href="assets/activity-graph.svg?v=202603080701"><img src="assets/links/snapshot-activity.svg" alt="Activity Graph" /></a>
 </p>
 <!-- SNAPSHOT_LINKS:END -->
 
 <p align="center">
-  <img height="170" src="assets/github-stats.svg?v=202603080558" alt="GitHub stats" />
-  <img height="170" src="assets/top-langs.svg?v=202603080558" alt="Top languages" />
+  <img height="170" src="assets/github-stats.svg?v=202603080701" alt="GitHub stats" />
+  <img height="170" src="assets/top-langs.svg?v=202603080701" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="assets/streak.svg?v=202603080558" alt="Streak stats" />
+  <img src="assets/streak.svg?v=202603080701" alt="Streak stats" />
 </p>
 
 <p align="center">
-  <img src="assets/activity-graph.svg?v=202603080558" alt="Activity graph" />
+  <img src="assets/activity-graph.svg?v=202603080701" alt="Activity graph" />
 </p>
 
 <p align="center">
