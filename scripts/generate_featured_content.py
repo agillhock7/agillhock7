@@ -43,6 +43,7 @@ FEATURED_PROJECTS = [
     {
         "repo": "EveryMile",
         "summary": "Track movement, true operating cost, and deduction value in one defensible stream.",
+        "public_url": "https://em.gops.app",
     },
     {
         "repo": "MySite",
@@ -253,20 +254,29 @@ def build_project_data() -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     for project in FEATURED_PROJECTS:
         repo = project["repo"]
+        public_url = normalize_homepage(str(project.get("public_url", "")))
         try:
             data = api_get(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
         except urllib.error.HTTPError as err:
             if err.code == 404:
+                if public_url:
+                    print(
+                        f"[featured] Repo metadata unavailable for {GITHUB_USER}/{repo} (HTTP 404); using public URL.",
+                        file=sys.stderr,
+                    )
+                    data = {}
+                else:
+                    print(
+                        f"[featured] Skipping missing repo: {GITHUB_USER}/{repo} (HTTP 404)",
+                        file=sys.stderr,
+                    )
+                    continue
+            else:
                 print(
-                    f"[featured] Skipping missing repo: {GITHUB_USER}/{repo} (HTTP 404)",
+                    f"[featured] Unable to fetch metadata for {GITHUB_USER}/{repo} (HTTP {err.code}); using defaults.",
                     file=sys.stderr,
                 )
-                continue
-            print(
-                f"[featured] Unable to fetch metadata for {GITHUB_USER}/{repo} (HTTP {err.code}); using defaults.",
-                file=sys.stderr,
-            )
-            data = {}
+                data = {}
         except urllib.error.URLError as err:
             print(
                 f"[featured] Unable to fetch metadata for {GITHUB_USER}/{repo} ({err.reason}); using defaults.",
@@ -279,6 +289,9 @@ def build_project_data() -> list[dict[str, Any]]:
 
         homepage = normalize_homepage(str(data.get("homepage", "")))
         repo_url = str(data.get("html_url", f"https://github.com/{GITHUB_USER}/{repo}"))
+        if public_url:
+            homepage = public_url
+            repo_url = public_url
         items.append(
             {
                 "repo": repo,
