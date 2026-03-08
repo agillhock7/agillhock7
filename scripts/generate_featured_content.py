@@ -6,10 +6,12 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 from io import BytesIO
 from pathlib import Path
 from typing import Any
 import urllib.parse
+import urllib.error
 import urllib.request
 
 try:
@@ -251,9 +253,30 @@ def build_project_data() -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     for project in FEATURED_PROJECTS:
         repo = project["repo"]
-        data = api_get(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
+        try:
+            data = api_get(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
+        except urllib.error.HTTPError as err:
+            if err.code == 404:
+                print(
+                    f"[featured] Skipping missing repo: {GITHUB_USER}/{repo} (HTTP 404)",
+                    file=sys.stderr,
+                )
+                continue
+            print(
+                f"[featured] Unable to fetch metadata for {GITHUB_USER}/{repo} (HTTP {err.code}); using defaults.",
+                file=sys.stderr,
+            )
+            data = {}
+        except urllib.error.URLError as err:
+            print(
+                f"[featured] Unable to fetch metadata for {GITHUB_USER}/{repo} ({err.reason}); using defaults.",
+                file=sys.stderr,
+            )
+            data = {}
+
         if not isinstance(data, dict):
-            continue
+            data = {}
+
         homepage = normalize_homepage(str(data.get("homepage", "")))
         repo_url = str(data.get("html_url", f"https://github.com/{GITHUB_USER}/{repo}"))
         items.append(
