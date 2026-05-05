@@ -12,6 +12,7 @@ on:
       - "scripts/generate_header.py"
       - "scripts/generate_tech_badges.py"
       - "scripts/generate_featured_content.py"
+      - "scripts/generate_streak_card.py"
       - "scripts/update_readme_cache_bust.py"
   schedule:
     - cron: "17 * * * *"
@@ -56,11 +57,16 @@ jobs:
           GITHUB_USER: agillhock7
         run: python3 scripts/generate_stats_card.py
 
+      - name: Generate streak card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: agillhock7
+        run: python3 scripts/generate_streak_card.py
+
       - name: Download remaining cards
         run: |
           CACHE_BUST="$(date -u +%Y%m%d%H%M)"
           curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=agillhock7&theme=github_dark&v=${CACHE_BUST}" -o assets/top-langs.svg
-          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://streak-stats.demolab.com?user=agillhock7&hide_border=true&theme=tokyonight&ring=22c55e&fire=22c55e&currStreakLabel=22c55e&v=${CACHE_BUST}" -o assets/streak.svg
           curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0b1220&color=8ccfaf&line=22c55e&point=9be9a8&area=true&area_color=1f5f4a&hide_border=true&custom_title=Contribution%20Activity&radius=8&v=${CACHE_BUST}" -o assets/activity-graph.svg
 
       - name: Update README cache bust query params
