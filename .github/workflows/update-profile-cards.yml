@@ -59,7 +59,7 @@ jobs:
 
       - name: Generate streak card
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USER: agillhock7
         run: python3 scripts/generate_streak_card.py
 

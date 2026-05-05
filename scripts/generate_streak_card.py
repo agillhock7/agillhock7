@@ -50,6 +50,12 @@ class StreakStats:
     longest: Streak
 
 
+@dataclass(frozen=True)
+class ContributionData:
+    total_contributions: int
+    days: dict[date, int]
+
+
 def request_json(url: str, body: dict[str, Any] | None = None) -> dict[str, Any] | list[Any]:
     headers = {
         "Accept": "application/vnd.github+json",
@@ -101,12 +107,13 @@ def iter_dates(start: date, end: date):
         day += timedelta(days=1)
 
 
-def fetch_contribution_days(user: str, start: date, end: date) -> dict[date, int]:
+def fetch_contribution_range(user: str, start: date, end: date) -> ContributionData:
     query = """
     query($login: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $login) {
         contributionsCollection(from: $from, to: $to) {
           contributionCalendar {
+            totalContributions
             weeks {
               contributionDays {
                 date
@@ -120,10 +127,9 @@ def fetch_contribution_days(user: str, start: date, end: date) -> dict[date, int
     """
 
     contributions = {day: 0 for day in iter_dates(start, end)}
-    chunk_start = start
+    total_contributions = 0
 
-    while chunk_start <= end:
-        chunk_end = min(chunk_start + timedelta(days=MAX_CONTRIBUTION_DAYS - 1), end)
+    for chunk_start, chunk_end in contribution_ranges(start, end):
         data = graphql(
             query,
             {
@@ -136,20 +142,35 @@ def fetch_contribution_days(user: str, start: date, end: date) -> dict[date, int
         user_data = data.get("user")
         if not isinstance(user_data, dict):
             raise RuntimeError(f"GitHub user not found: {user}")
-        calendar = (
-            user_data.get("contributionsCollection", {})
-            .get("contributionCalendar", {})
-            .get("weeks", [])
-        )
-        for week in calendar:
+        calendar = user_data.get("contributionsCollection", {}).get("contributionCalendar", {})
+        total_contributions += int(calendar.get("totalContributions", 0))
+
+        for week in calendar.get("weeks", []):
             for item in week.get("contributionDays", []):
                 day = date.fromisoformat(str(item["date"]))
                 if chunk_start <= day <= chunk_end:
                     contributions[day] = int(item.get("contributionCount", 0))
 
-        chunk_start = chunk_end + timedelta(days=1)
+    return ContributionData(total_contributions=total_contributions, days=contributions)
 
-    return contributions
+
+def contribution_ranges(start: date, end: date) -> list[tuple[date, date]]:
+    ranges: list[tuple[date, date]] = []
+    year = start.year
+
+    while year <= end.year:
+        range_start = max(start, date(year, 1, 1))
+        range_end = min(end, date(year, 12, 31))
+        chunk_start = range_start
+
+        while chunk_start <= range_end:
+            chunk_end = min(chunk_start + timedelta(days=MAX_CONTRIBUTION_DAYS - 1), range_end)
+            ranges.append((chunk_start, chunk_end))
+            chunk_start = chunk_end + timedelta(days=1)
+
+        year += 1
+
+    return ranges
 
 
 def choose_longer(candidate: Streak, current: Streak) -> Streak:
@@ -164,13 +185,17 @@ def choose_longer(candidate: Streak, current: Streak) -> Streak:
     return current
 
 
-def calculate_streaks(contributions: dict[date, int], today: date | None = None) -> tuple[int, Streak, Streak]:
+def calculate_streaks(
+    contributions: dict[date, int],
+    today: date | None = None,
+    total_contributions: int | None = None,
+) -> tuple[int, Streak, Streak]:
     if not contributions:
         return 0, Streak(0), Streak(0)
 
     days = sorted(contributions)
     today = today or days[-1]
-    total = sum(contributions.values())
+    total = sum(contributions.values()) if total_contributions is None else total_contributions
 
     longest = Streak(0)
     run_start: date | None = None
@@ -315,8 +340,12 @@ def render_svg(stats: StreakStats) -> str:
 def main() -> None:
     today = datetime.now(timezone.utc).date()
     account_created_at = fetch_account_created_at(GITHUB_USER)
-    contributions = fetch_contribution_days(GITHUB_USER, account_created_at, today)
-    total, current, longest = calculate_streaks(contributions, today=today)
+    contribution_data = fetch_contribution_range(GITHUB_USER, account_created_at, today)
+    total, current, longest = calculate_streaks(
+        contribution_data.days,
+        today=today,
+        total_contributions=contribution_data.total_contributions,
+    )
 
     stats = StreakStats(
         total_contributions=total,
