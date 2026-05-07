@@ -28,6 +28,7 @@ ICON_ITEMS = [
     ("ubuntu", "Ubuntu", "simple:ubuntu"),
     ("ssl-tls", "SSL/TLS", "simple:letsencrypt"),
     ("git", "Git", "simple:git"),
+    ("docker", "Docker", "simple:docker"),
     ("vscode", "VS Code", "url:https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"),
     ("roblox-studio", "Roblox Studio", "simple:robloxstudio"),
     ("hosting", "Hosting", "custom:hosting"),

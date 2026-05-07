@@ -40,6 +40,7 @@
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ubuntu.svg" alt="Ubuntu" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ssl-tls.svg" alt="SSL/TLS" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/git.svg" alt="Git" /></a>
+  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/docker.svg" alt="Docker" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vscode.svg" alt="VS Code" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/roblox-studio.svg" alt="Roblox Studio" /></a>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/hosting.svg" alt="Hosting" /></a>
