@@ -8,7 +8,8 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=8CCAAF&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
 </p>
 
-## Tech Stack Comfort Zone
+---
+
 ### Frontend
 <p>
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vue.svg" alt="Vue" /></a>
