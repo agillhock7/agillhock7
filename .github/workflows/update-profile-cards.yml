@@ -23,10 +23,12 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      TARGET_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
       - name: Ensure assets directory
@@ -85,5 +87,5 @@ jobs:
           fi
 
           git commit -m "chore: update profile cards"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git pull --rebase origin "${TARGET_BRANCH}"
+          git push origin "HEAD:${TARGET_BRANCH}"

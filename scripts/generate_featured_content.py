@@ -39,27 +39,33 @@ FEATURED_PROJECTS = [
     {
         "repo": "OnLedge",
         "summary": "Snap receipts, stay organized, and see where your money goes.",
+        "homepage_hosts": ["onledge.gops.app"],
     },
     {
         "repo": "EveryMile",
         "summary": "Track movement, true operating cost, and deduction value in one defensible stream.",
         "public_url": "https://em.gops.app",
+        "homepage_hosts": ["em.gops.app"],
     },
     {
         "repo": "MySite",
         "summary": "A beginning look at personalized UI with AI.",
+        "homepage_hosts": ["my.alexanderjgill.com"],
     },
     {
         "repo": "Slapshot-Snapshot",
         "summary": "Team photos and videos.",
+        "homepage_hosts": ["snap.pucc.us"],
     },
     {
         "repo": "parcel-tracker",
         "summary": "Secure shipment tracking across desktop and mobile.",
+        "homepage_hosts": ["tb4.alexander.quest"],
     },
     {
         "repo": "feedabum",
         "summary": "Hyperlocal micro-giving for verified neighbors; scan, verify, and donate in under a minute.",
+        "homepage_hosts": ["fab.gops.app"],
     },
 ]
 
@@ -250,11 +256,34 @@ def normalize_homepage(homepage: str) -> str:
     return f"https://{value}"
 
 
+def normalize_host(host: str) -> str:
+    return host.strip().lower().rstrip(".")
+
+
+def homepage_host(homepage: str) -> str:
+    parsed = urllib.parse.urlparse(homepage)
+    return normalize_host(parsed.hostname or "")
+
+
+def configured_homepage_hosts(project: dict[str, Any]) -> set[str]:
+    hosts = project.get("homepage_hosts", [])
+    if isinstance(hosts, str):
+        hosts = [hosts]
+    return {normalize_host(str(host)) for host in hosts if normalize_host(str(host))}
+
+
+def homepage_is_allowed(homepage: str, allowed_hosts: set[str]) -> bool:
+    return bool(homepage) and bool(allowed_hosts) and homepage_host(homepage) in allowed_hosts
+
+
 def build_project_data() -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     for project in FEATURED_PROJECTS:
         repo = project["repo"]
+        allowed_hosts = configured_homepage_hosts(project)
         public_url = normalize_homepage(str(project.get("public_url", "")))
+        if public_url and not homepage_is_allowed(public_url, allowed_hosts):
+            raise ValueError(f"Configured public_url for {repo} is not in homepage_hosts.")
         try:
             data = api_get(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
         except urllib.error.HTTPError as err:
@@ -289,6 +318,12 @@ def build_project_data() -> list[dict[str, Any]]:
 
         homepage = normalize_homepage(str(data.get("homepage", "")))
         repo_url = str(data.get("html_url", f"https://github.com/{GITHUB_USER}/{repo}"))
+        if homepage and not homepage_is_allowed(homepage, allowed_hosts):
+            print(
+                f"[featured] Ignoring unexpected homepage for {GITHUB_USER}/{repo}: {homepage}",
+                file=sys.stderr,
+            )
+            homepage = ""
         if public_url:
             homepage = public_url
             repo_url = public_url
