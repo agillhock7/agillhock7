@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import struct
 import sys
 from io import BytesIO
 from pathlib import Path
@@ -13,11 +14,14 @@ from typing import Any
 import urllib.parse
 import urllib.error
 import urllib.request
+import zlib
 
 try:
-    from PIL import Image, ImageStat
+    from PIL import Image, ImageChops, ImageDraw, ImageStat
 except ModuleNotFoundError:
     Image = None
+    ImageChops = None
+    ImageDraw = None
     ImageStat = None
 
 
@@ -34,6 +38,8 @@ THUM_WAIT_SECONDARY = 18000
 MIN_PREVIEW_BYTES = 12000
 MAX_WHITE_RATIO = 0.86
 MIN_PIXEL_STDDEV = 9.0
+PREVIEW_CORNER_RADIUS = 24
+PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 
 FEATURED_PROJECTS = [
     {
@@ -158,16 +164,199 @@ def is_washed_preview(image_bytes: bytes) -> bool:
         return False
 
 
-def write_preview_image(destination: Path, image_bytes: bytes) -> None:
-    if Image is None:
-        destination.write_bytes(image_bytes)
+def png_chunk(kind: bytes, data: bytes) -> bytes:
+    checksum = zlib.crc32(kind)
+    checksum = zlib.crc32(data, checksum) & 0xFFFFFFFF
+    return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", checksum)
+
+
+def paeth_predictor(left: int, up: int, up_left: int) -> int:
+    estimate = left + up - up_left
+    distance_left = abs(estimate - left)
+    distance_up = abs(estimate - up)
+    distance_up_left = abs(estimate - up_left)
+    if distance_left <= distance_up and distance_left <= distance_up_left:
+        return left
+    if distance_up <= distance_up_left:
+        return up
+    return up_left
+
+
+def unfilter_png_rows(raw: bytes, width: int, height: int, bytes_per_pixel: int) -> list[bytearray]:
+    row_size = width * bytes_per_pixel
+    rows: list[bytearray] = []
+    previous = bytearray(row_size)
+    cursor = 0
+
+    for _ in range(height):
+        if cursor + 1 + row_size > len(raw):
+            raise ValueError("PNG data ended before all rows were decoded.")
+
+        filter_type = raw[cursor]
+        cursor += 1
+        filtered = raw[cursor : cursor + row_size]
+        cursor += row_size
+        row = bytearray(row_size)
+
+        for i, value in enumerate(filtered):
+            left = row[i - bytes_per_pixel] if i >= bytes_per_pixel else 0
+            up = previous[i]
+            up_left = previous[i - bytes_per_pixel] if i >= bytes_per_pixel else 0
+
+            if filter_type == 0:
+                predictor = 0
+            elif filter_type == 1:
+                predictor = left
+            elif filter_type == 2:
+                predictor = up
+            elif filter_type == 3:
+                predictor = (left + up) // 2
+            elif filter_type == 4:
+                predictor = paeth_predictor(left, up, up_left)
+            else:
+                raise ValueError(f"Unsupported PNG filter type: {filter_type}")
+
+            row[i] = (value + predictor) & 0xFF
+
+        rows.append(row)
+        previous = row
+
+    return rows
+
+
+def rgba_png_rows(rows: list[bytearray], width: int, color_type: int) -> list[bytearray]:
+    if color_type == 6:
+        return rows
+
+    rgba_rows: list[bytearray] = []
+    for row in rows:
+        rgba = bytearray(width * 4)
+        for x in range(width):
+            source = x * 3
+            target = x * 4
+            rgba[target : target + 3] = row[source : source + 3]
+            rgba[target + 3] = 255
+        rgba_rows.append(rgba)
+    return rgba_rows
+
+
+def corner_alpha_coverage(x: int, y: int, width: int, height: int, radius: int) -> float:
+    if not ((x < radius or x >= width - radius) and (y < radius or y >= height - radius)):
+        return 1.0
+
+    center_x = radius if x < radius else width - radius
+    center_y = radius if y < radius else height - radius
+    samples = 4
+    inside = 0
+    radius_squared = radius * radius
+
+    for sample_y in range(samples):
+        point_y = y + (sample_y + 0.5) / samples
+        for sample_x in range(samples):
+            point_x = x + (sample_x + 0.5) / samples
+            if (point_x - center_x) ** 2 + (point_y - center_y) ** 2 <= radius_squared:
+                inside += 1
+
+    return inside / (samples * samples)
+
+
+def apply_rounded_alpha(rows: list[bytearray], width: int, height: int, radius: int) -> None:
+    radius = max(0, min(radius, width // 2, height // 2))
+    if radius == 0:
         return
 
+    for y, row in enumerate(rows):
+        if radius <= y < height - radius:
+            continue
+        for x in range(width):
+            coverage = corner_alpha_coverage(x, y, width, height, radius)
+            if coverage < 1.0:
+                alpha_index = (x * 4) + 3
+                row[alpha_index] = round(row[alpha_index] * coverage)
+
+
+def encode_rgba_png(width: int, height: int, rows: list[bytearray]) -> bytes:
+    ihdr = struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)
+    raw = b"".join(b"\x00" + bytes(row) for row in rows)
+    return (
+        PNG_SIGNATURE
+        + png_chunk(b"IHDR", ihdr)
+        + png_chunk(b"IDAT", zlib.compress(raw, level=9))
+        + png_chunk(b"IEND", b"")
+    )
+
+
+def round_png_corners(image_bytes: bytes, radius: int) -> bytes | None:
+    if not image_bytes.startswith(PNG_SIGNATURE):
+        return None
+
+    offset = len(PNG_SIGNATURE)
+    width = height = bit_depth = color_type = interlace = 0
+    compressed = bytearray()
+
+    while offset + 8 <= len(image_bytes):
+        length = struct.unpack(">I", image_bytes[offset : offset + 4])[0]
+        kind = image_bytes[offset + 4 : offset + 8]
+        data_start = offset + 8
+        data_end = data_start + length
+        if data_end + 4 > len(image_bytes):
+            return None
+
+        data = image_bytes[data_start:data_end]
+        offset = data_end + 4
+
+        if kind == b"IHDR":
+            width, height, bit_depth, color_type, compression, filter_method, interlace = struct.unpack(
+                ">IIBBBBB", data
+            )
+            if compression != 0 or filter_method != 0:
+                return None
+        elif kind == b"IDAT":
+            compressed.extend(data)
+        elif kind == b"IEND":
+            break
+
+    if bit_depth != 8 or color_type not in {2, 6} or interlace != 0 or not compressed:
+        return None
+
+    bytes_per_pixel = 4 if color_type == 6 else 3
+    rows = unfilter_png_rows(zlib.decompress(bytes(compressed)), width, height, bytes_per_pixel)
+    rgba_rows = rgba_png_rows(rows, width, color_type)
+    apply_rounded_alpha(rgba_rows, width, height, radius)
+    return encode_rgba_png(width, height, rgba_rows)
+
+
+def round_preview_corners(image_bytes: bytes, radius: int = PREVIEW_CORNER_RADIUS) -> bytes:
+    if radius <= 0:
+        return image_bytes
+
+    if Image is not None and ImageDraw is not None and ImageChops is not None:
+        try:
+            with Image.open(BytesIO(image_bytes)) as image:
+                rounded = image.convert("RGBA")
+                mask = Image.new("L", rounded.size, 0)
+                draw = ImageDraw.Draw(mask)
+                draw.rounded_rectangle(
+                    (0, 0, rounded.width - 1, rounded.height - 1),
+                    radius=radius,
+                    fill=255,
+                )
+                rounded.putalpha(ImageChops.multiply(rounded.getchannel("A"), mask))
+                output = BytesIO()
+                rounded.save(output, format="PNG", optimize=True)
+                return output.getvalue()
+        except Exception:
+            pass
+
     try:
-        with Image.open(BytesIO(image_bytes)) as image:
-            image.convert("RGB").save(destination, format="PNG", optimize=True)
+        rounded_png = round_png_corners(image_bytes, radius)
     except Exception:
-        destination.write_bytes(image_bytes)
+        rounded_png = None
+    return rounded_png if rounded_png is not None else image_bytes
+
+
+def write_preview_image(destination: Path, image_bytes: bytes) -> None:
+    destination.write_bytes(round_preview_corners(image_bytes))
 
 
 def capture_preview(homepage: str, slug: str) -> str:
