@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=8CCAAF&center=true&vCenter=true&width=850&lines=Building+clean+web+experiences;Vue+%2B+TypeScript+on+the+front+end;PHP%2C+WordPress%2C+and+SQL+on+the+back+end;Always+improving%2C+moving+forward" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=8CCAAF&center=true&vCenter=true&width=850&lines=Transparent+Hosting;Actionable+AI+Tools;Custom+Development" alt="Typing intro" />
 </p>
 
 ---
