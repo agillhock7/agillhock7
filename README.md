@@ -10,45 +10,6 @@
 
 ---
 
-### Frontend
-<p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vue.svg" alt="Vue" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vite.svg" alt="Vite" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/typescript.svg" alt="TypeScript" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/javascript.svg" alt="JavaScript" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/lua.svg" alt="Lua" /></a>
-</p>
-
-### Backend And CMS
-<p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/php.svg" alt="PHP" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/wordpress.svg" alt="WordPress" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/apache.svg" alt="Apache" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/cpanel.svg" alt="cPanel" /></a>
-</p>
-
-### Data And Storage
-<p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/mysql.svg" alt="MySQL" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/phpmyadmin.svg" alt="phpMyAdmin" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/phppgadmin.svg" alt="phpPgAdmin" /></a>
-</p>
-
-### Platform, Security, And Tools
-<p>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/linux.svg" alt="Linux" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ubuntu.svg" alt="Ubuntu" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/ssl-tls.svg" alt="SSL/TLS" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/git.svg" alt="Git" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/docker.svg" alt="Docker" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/vscode.svg" alt="VS Code" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/roblox-studio.svg" alt="Roblox Studio" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/hosting.svg" alt="Hosting" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/domains.svg" alt="Domains" /></a>
-  <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com"><img src="assets/stack/codex.svg" alt="Codex" /></a>
-</p>
-
 ## Featured Projects
 <!-- FEATURED_TABLE:START -->
 | Project | Summary |
