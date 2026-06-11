@@ -31,7 +31,7 @@ class TopLanguagesCardTest(unittest.TestCase):
             summary,
         )
 
-    def test_card_labels_stats_as_code_bytes_not_repo_counts(self) -> None:
+    def test_card_uses_uncluttered_code_language_layout(self) -> None:
         svg = top_languages.build_svg(
             [
                 ("PHP", 600, 60.0),
@@ -43,8 +43,12 @@ class TopLanguagesCardTest(unittest.TestCase):
         )
 
         self.assertIn("Top Languages by Code", svg)
-        self.assertIn("GitHub Linguist bytes", svg)
         self.assertNotIn("Top Languages by Repo", svg)
+        self.assertNotIn("GitHub Linguist bytes", svg)
+        self.assertNotIn("excluded:", svg)
+        self.assertNotIn("public original repos", svg)
+        self.assertNotIn("600 B", svg)
+        self.assertNotIn("300 B", svg)
 
 
 if __name__ == "__main__":

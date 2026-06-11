@@ -178,27 +178,20 @@ def language_color(language: str) -> str:
     return FALLBACK_COLORS[digest[0] % len(FALLBACK_COLORS)]
 
 
-def format_bytes(byte_count: int) -> str:
-    if byte_count >= 1_000_000:
-        return f"{byte_count / 1_000_000:.1f} MB"
-    if byte_count >= 1_000:
-        return f"{byte_count / 1_000:.1f} KB"
-    return f"{byte_count} B"
-
-
 def build_svg(
     summary: list[tuple[str, int, float]],
     *,
     repo_count: int,
     timestamp: str,
 ) -> str:
+    _ = repo_count
     width = 430
-    height = 240
-    bar_x = 152
-    bar_width = 230
-    bar_height = 9
-    y_start = 72
-    y_step = 20
+    height = 200
+    bar_x = 148
+    bar_width = 220
+    bar_height = 8
+    y_start = 58
+    y_step = 18
     largest = max((byte_count for _, byte_count, _ in summary), default=1)
 
     rows = []
@@ -207,15 +200,13 @@ def build_svg(
         color = language_color(language)
         current_bar_width = max(3, round((byte_count / largest) * bar_width))
         rows.append(
-            f'<rect x="26" y="{y - 9}" width="10" height="10" rx="2" fill="{color}" />'
+            f'<rect x="26" y="{y - 8}" width="9" height="9" rx="2" fill="{color}" />'
             f'<text x="44" y="{y}" fill="#dbeafe" font-size="12" '
             f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{escape(language)}</text>'
-            f'<rect x="{bar_x}" y="{y - 9}" width="{bar_width}" height="{bar_height}" rx="4.5" fill="#1c2633" />'
-            f'<rect x="{bar_x}" y="{y - 9}" width="{current_bar_width}" height="{bar_height}" rx="4.5" fill="{color}" />'
+            f'<rect x="{bar_x}" y="{y - 8}" width="{bar_width}" height="{bar_height}" rx="4" fill="#1c2633" />'
+            f'<rect x="{bar_x}" y="{y - 8}" width="{current_bar_width}" height="{bar_height}" rx="4" fill="{color}" />'
             f'<text x="405" y="{y}" text-anchor="end" fill="#93a9bd" font-size="11" '
             f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{percent:.1f}%</text>'
-            f'<text x="44" y="{y + 12}" fill="#6f86a0" font-size="9" '
-            f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{format_bytes(byte_count)}</text>'
         )
 
     if not rows:
@@ -223,10 +214,6 @@ def build_svg(
             '<text x="26" y="116" fill="#93a9bd" font-size="13" '
             'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">No public language data found.</text>'
         )
-
-    footer = f"{repo_count} public original repos"
-    if EXCLUDED_LANGUAGE_BUCKETS:
-        footer += f" | excluded: {', '.join(sorted(EXCLUDED_LANGUAGE_BUCKETS))}"
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" role="img" aria-label="Top Languages by Code">
   <title>Top Languages by Code</title>
@@ -237,14 +224,10 @@ def build_svg(
     </linearGradient>
   </defs>
   <rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="10" fill="#0d1117" stroke="#2b3545" />
-  <text x="22" y="34" fill="url(#languageTitleGrad)" font-size="22" font-weight="700"
+  <text x="22" y="32" fill="url(#languageTitleGrad)" font-size="22" font-weight="700"
         font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Top Languages by Code</text>
-  <text x="22" y="52" fill="#6f86a0" font-size="11"
-        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">GitHub Linguist bytes across public original repos</text>
   {''.join(rows)}
-  <text x="22" y="222" fill="#6f86a0" font-size="10"
-        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{escape(footer)}</text>
-  <text x="408" y="222" text-anchor="end" fill="#6f86a0" font-size="10"
+  <text x="408" y="184" text-anchor="end" fill="#6f86a0" font-size="10"
         font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Updated: {escape(timestamp)}</text>
 </svg>
 """
