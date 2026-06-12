@@ -61,7 +61,7 @@
 ## GitHub Snapshot
 <!-- SNAPSHOT_LINKS:START -->
 <p align="center">
-  <a href="assets/github-stats.svg?v=202606120004"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
+  <a href="assets/github-stats.svg?v=202606120006"><img src="assets/links/snapshot-stats.svg" alt="Stats Card" /></a>
   <a href="assets/top-langs.svg?v=202606120004"><img src="assets/links/snapshot-langs.svg" alt="Top Languages" /></a>
   <a href="assets/streak.svg?v=202606120004"><img src="assets/links/snapshot-streak.svg" alt="Streak" /></a>
   <a href="assets/activity-graph.svg?v=202606120004"><img src="assets/links/snapshot-activity.svg" alt="Activity Graph" /></a>
@@ -69,7 +69,7 @@
 <!-- SNAPSHOT_LINKS:END -->
 
 <p align="center">
-  <img height="170" src="assets/github-stats.svg?v=202606120004" alt="GitHub stats" />
+  <img height="170" src="assets/github-stats.svg?v=202606120006" alt="GitHub stats" />
   <img height="170" src="assets/top-langs.svg?v=202606120004" alt="Top languages" />
 </p>
 

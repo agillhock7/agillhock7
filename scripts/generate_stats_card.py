@@ -17,6 +17,7 @@ from pathlib import Path
 
 GITHUB_USER = os.getenv("GITHUB_USER", "agillhock7")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
+PRIVATE_REPO_COUNT = os.getenv("PRIVATE_REPO_COUNT", "").strip()
 OUTFILE = Path("assets/github-stats.svg")
 TRANSIENT_STATUS_CODES = {429, 500, 502, 503, 504}
 API_RETRIES = int(os.getenv("GITHUB_API_RETRIES", "4"))
@@ -80,6 +81,12 @@ def fetch_repos(user: str) -> list[dict]:
 
 
 def fetch_private_repo_count(user: str) -> int | str:
+    if PRIVATE_REPO_COUNT:
+        try:
+            return int(PRIVATE_REPO_COUNT)
+        except ValueError:
+            return PRIVATE_REPO_COUNT
+
     if not GITHUB_TOKEN:
         return previous_metric("Private Repos") or "--"
 
