@@ -79,6 +79,45 @@ def fetch_repos(user: str) -> list[dict]:
     return repos
 
 
+def fetch_private_repo_count(user: str) -> int | str:
+    if not GITHUB_TOKEN:
+        return previous_metric("Private Repos") or "--"
+
+    try:
+        count = 0
+        page = 1
+        while True:
+            url = (
+                "https://api.github.com/user/repos"
+                f"?visibility=private&affiliation=owner&per_page=100&page={page}"
+            )
+            batch = api_get(url)
+            if not isinstance(batch, list) or not batch:
+                break
+
+            for repo in batch:
+                owner = repo.get("owner", {})
+                owner_login = str(owner.get("login", "")).lower() if isinstance(owner, dict) else ""
+                if repo.get("private") and owner_login == user.lower():
+                    count += 1
+            page += 1
+        return count
+    except Exception as err:
+        fallback = previous_metric("Private Repos")
+        if fallback is not None:
+            print(
+                f"[stats] Unable to refresh Private Repos; keeping previous value {fallback}: {err}",
+                file=sys.stderr,
+            )
+            return fallback
+
+        print(
+            f"[stats] Unable to refresh Private Repos; no previous value available, using --: {err}",
+            file=sys.stderr,
+        )
+        return "--"
+
+
 def format_iso_day(value: str | None) -> str:
     if not value:
         return "--"
@@ -124,6 +163,39 @@ def search_total(user: str, item_type: str, label: str) -> int | str:
         return 0
 
 
+def build_stats_svg(lines: list[tuple[str, int | str]], *, timestamp: str) -> str:
+    svg_lines = []
+    y_start = 58
+    y_step = 15
+    for idx, (label, value) in enumerate(lines):
+        y = y_start + idx * y_step
+        svg_lines.append(
+            f'<text x="26" y="{y}" fill="#93a9bd" font-size="12" '
+            f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{label}:</text>'
+        )
+        svg_lines.append(
+            f'<text x="200" y="{y}" fill="#dbeafe" font-size="12" '
+            f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700">{value}</text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="430" height="240" role="img" aria-label="GitHub Stats">
+  <title>GitHub Stats</title>
+  <defs>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="428" height="238" rx="10" fill="#0d1117" stroke="#2b3545" />
+  <text x="22" y="34" fill="url(#titleGrad)" font-size="24" font-weight="700"
+        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Stats</text>
+  {''.join(svg_lines)}
+  <text x="22" y="222" fill="#6f86a0" font-size="11"
+        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Updated: {timestamp}</text>
+</svg>
+"""
+
+
 def main() -> None:
     user = GITHUB_USER
     repos = fetch_repos(user)
@@ -131,6 +203,7 @@ def main() -> None:
     events = api_get(f"https://api.github.com/users/{user}/events/public?per_page=1")
 
     public_repos = int(user_info.get("public_repos", 0))
+    private_repos = fetch_private_repo_count(user)
     public_nonfork_repos = sum(1 for r in repos if not r.get("fork"))
     total_stars = sum(int(r.get("stargazers_count", 0)) for r in repos)
     total_forks = sum(int(r.get("forks_count", 0)) for r in repos)
@@ -148,6 +221,7 @@ def main() -> None:
 
     lines = [
         ("Public Repos", public_repos),
+        ("Private Repos", private_repos),
         ("Original Repos", public_nonfork_repos),
         ("Total Stars", total_stars),
         ("Total Forks", total_forks),
@@ -158,38 +232,7 @@ def main() -> None:
         ("Last Repo Push", latest_push),
     ]
 
-    svg_lines = []
-    y_start = 62
-    y_step = 17
-    for idx, (label, value) in enumerate(lines):
-        y = y_start + idx * y_step
-        svg_lines.append(
-            f'<text x="26" y="{y}" fill="#93a9bd" font-size="13" '
-            f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif">{label}:</text>'
-        )
-        svg_lines.append(
-            f'<text x="200" y="{y}" fill="#dbeafe" font-size="13" '
-            f'font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-weight="700">{value}</text>'
-        )
-
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="430" height="240" role="img" aria-label="GitHub Stats">
-  <title>GitHub Stats</title>
-  <defs>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#2563eb" />
-    </linearGradient>
-  </defs>
-  <rect x="1" y="1" width="428" height="238" rx="10" fill="#0d1117" stroke="#2b3545" />
-  <text x="22" y="36" fill="url(#titleGrad)" font-size="24" font-weight="700"
-        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Stats</text>
-  {''.join(svg_lines)}
-  <text x="22" y="222" fill="#6f86a0" font-size="11"
-        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Updated: {timestamp}</text>
-  <text x="408" y="222" text-anchor="end" fill="#6f86a0" font-size="11"
-        font-family="Verdana,Geneva,DejaVu Sans,sans-serif">Live API</text>
-</svg>
-"""
+    svg = build_stats_svg(lines, timestamp=timestamp)
 
     OUTFILE.parent.mkdir(parents=True, exist_ok=True)
     OUTFILE.write_text(svg, encoding="utf-8")
