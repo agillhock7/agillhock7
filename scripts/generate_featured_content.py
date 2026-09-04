@@ -292,7 +292,7 @@ def build_principles(principles: list[dict[str, Any]]) -> str:
 def write_link_badges(profile: dict[str, Any], projects: list[dict[str, Any]]) -> None:
     LINKS_DIR.mkdir(parents=True, exist_ok=True)
     write_badge(LINKS_DIR / "cta-portfolio.svg", "ENTER THE FORWARD LAB", "#8CCAAF")
-    write_badge(LINKS_DIR / "cta-github.svg", "VIEW REPOSITORIES", "#38BDF8")
+    write_badge(LINKS_DIR / "cta-repositories.svg", "VIEW REPOSITORIES", "#38BDF8")
     for project in projects:
         accent = str(project["accent"])
         write_badge(LINKS_DIR / f'live-{project["slug"]}.svg', "OPEN LIVE SYSTEM", accent)
