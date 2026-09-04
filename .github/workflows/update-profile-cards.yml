@@ -14,6 +14,7 @@ on:
       - "scripts/generate_featured_content.py"
       - "scripts/generate_top_languages_card.py"
       - "scripts/generate_streak_card.py"
+      - "scripts/generate_activity_graph.py"
       - "scripts/update_readme_cache_bust.py"
   schedule:
     - cron: "17 * * * *"
@@ -27,7 +28,7 @@ jobs:
     env:
       TARGET_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
@@ -73,10 +74,11 @@ jobs:
           GITHUB_USER: agillhock7
         run: python3 scripts/generate_streak_card.py
 
-      - name: Download activity graph
-        run: |
-          CACHE_BUST="$(date -u +%Y%m%d%H%M)"
-          curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 "https://github-readme-activity-graph.vercel.app/graph?username=agillhock7&bg_color=0b1220&color=8ccfaf&line=22c55e&point=9be9a8&area=true&area_color=1f5f4a&hide_border=true&custom_title=Contribution%20Activity&radius=8&v=${CACHE_BUST}" -o assets/activity-graph.svg
+      - name: Generate activity graph
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_USER: agillhock7
+        run: python3 scripts/generate_activity_graph.py
 
       - name: Update README cache bust query params
         run: python3 scripts/update_readme_cache_bust.py
