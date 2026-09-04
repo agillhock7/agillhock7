@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://AlexanderJGill.com"><img src="assets/links/cta-portfolio.svg?v=459939eef613" alt="Enter the Forward Lab" /></a>
-  <a href="https://github.com/agillhock7?tab=repositories"><img src="assets/links/cta-github.svg?v=78ee41233d71" alt="Explore the code" /></a>
+  <a href="https://github.com/agillhock7?tab=repositories"><img src="assets/links/cta-github.svg?v=e4c7f4c7e727" alt="View repositories" /></a>
 </p>
 
 <!-- NOW:START -->
@@ -178,7 +178,7 @@
 
 <p align="center">
   <a href="https://AlexanderJGill.com"><img src="assets/links/cta-portfolio.svg?v=459939eef613" alt="Visit AlexanderJGill.com" /></a>
-  <a href="https://github.com/agillhock7?tab=repositories"><img src="assets/links/cta-github.svg?v=78ee41233d71" alt="Explore Alexander Gill's repositories" /></a>
+  <a href="https://github.com/agillhock7?tab=repositories"><img src="assets/links/cta-github.svg?v=e4c7f4c7e727" alt="View Alexander Gill's repositories" /></a>
 </p>
 
 <p align="center">
