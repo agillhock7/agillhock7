@@ -55,7 +55,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=c546319ec810" alt="MySite production preview" width="100%" /></a>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=6ae3f70ac673" alt="MySite production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>IDENTITY + AI // FLAGSHIP SYSTEM</strong></sub>
@@ -82,7 +82,7 @@
 <table>
   <tr>
     <td width="33%" align="center" valign="top">
-      <a href="https://snap.pucc.us"><img src="assets/previews/slapshot-snapshot.png?v=81b60622645a" alt="Slapshot Snapshot production preview" width="100%" /></a><br/>
+      <a href="https://snap.pucc.us"><img src="assets/previews/slapshot-snapshot.png?v=ad1e89855f3b" alt="Slapshot Snapshot production preview" width="100%" /></a><br/>
       <sub><strong>MEDIA</strong></sub><br/>
       <strong>Slapshot Snapshot</strong><br/>
       <sub>A focused home for team photos and videos.</sub><br/><br/>
