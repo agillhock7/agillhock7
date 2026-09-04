@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import base64
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -151,10 +152,20 @@ def main() -> None:
     OUTDIR.mkdir(parents=True, exist_ok=True)
 
     for filename, label, icon_source in ICON_ITEMS:
-        icon_svg = fetch_icon(icon_source)
+        destination = OUTDIR / f"{filename}.svg"
+        try:
+            icon_svg = fetch_icon(icon_source)
+        except Exception as err:
+            if destination.exists():
+                print(
+                    f"[stack] Unable to refresh {label}; keeping existing badge: {err}",
+                    file=sys.stderr,
+                )
+                continue
+            raise
         icon_uri = to_data_uri(icon_svg)
         badge_svg = build_badge(label, icon_uri, f"grad-{filename}")
-        (OUTDIR / f"{filename}.svg").write_text(badge_svg, encoding="utf-8")
+        destination.write_text(badge_svg, encoding="utf-8")
 
     codex_uri = to_data_uri(CODEX_ICON)
     codex_badge = build_badge("Codex", codex_uri, "grad-codex")

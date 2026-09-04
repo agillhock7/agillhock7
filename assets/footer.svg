@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="126" viewBox="0 0 1200 126" role="img" aria-label="Keep moving forward">
+  <defs>
+    <linearGradient id="footer-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#07110F" />
+      <stop offset="0.5" stop-color="#8CCAAF" />
+      <stop offset="1" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <style>
+    .dash { stroke-dasharray: 12 18; animation: move 12s linear infinite; }
+    @keyframes move { to { stroke-dashoffset: -300; } }
+    @media (prefers-reduced-motion: reduce) { .dash { animation: none; } }
+  </style>
+  <rect width="1200" height="126" rx="14" fill="#07110F" />
+  <path class="dash" d="M45 34H1155" stroke="url(#footer-line)" stroke-width="2" />
+  <text x="600" y="76" text-anchor="middle" fill="#D9FFF0" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="18" font-weight="700" letter-spacing="3">MAKE IT USEFUL · SHIP IT · KEEP MOVING FORWARD</text>
+  <text x="600" y="101" text-anchor="middle" fill="#58786E" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" letter-spacing="2">ALEXANDER GILL // THE FORWARD LAB</text>
+</svg>

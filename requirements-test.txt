@@ -1,0 +1,2 @@
+-r requirements-profile.txt
+Pillow>=11,<13

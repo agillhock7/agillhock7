@@ -1,0 +1,100 @@
+version: 1
+
+brand:
+  name: Alexander Gill
+  eyebrow: ALEXANDER GILL // THE FORWARD LAB
+  headline: I BUILD CALM SYSTEMS FOR MESSY REAL-WORLD WORK.
+  positioning: Product engineering · infrastructure · practical AI
+  promise: Built end to end. Shipped to the real world. Operated with care.
+  website: https://AlexanderJGill.com
+  github: https://github.com/agillhock7
+
+now:
+  label: NOW TRANSMITTING
+  focus: Turning everyday friction into focused, dependable software.
+  signal: Six production systems across money, movement, identity, media, logistics, and community.
+
+projects:
+  - repo: OnLedge
+    name: OnLedge
+    domain: MONEY
+    tier: flagship
+    summary: Receipts, search, and clean exports without the bookkeeping chaos.
+    outcome: Capture online or offline, apply explainable rules, and keep the ledger ready for action.
+    capabilities: [CAMERA-FIRST, OFFLINE SYNC, FULL-TEXT SEARCH]
+    public_url: https://onledge.gops.app
+    homepage_hosts: [onledge.gops.app]
+    accent: "#38BDF8"
+
+  - repo: EveryMile
+    name: EveryMile
+    domain: MOVEMENT
+    tier: flagship
+    summary: A movement-value system that turns every trip into defensible business intelligence.
+    outcome: Track mileage, true operating cost, travel time, and deduction value in one clear stream.
+    capabilities: [TRIP INTELLIGENCE, TRUE COST, REPORTING]
+    public_url: https://em.gops.app
+    homepage_hosts: [em.gops.app]
+    accent: "#2DD4BF"
+
+  - repo: MySite
+    name: MySite
+    domain: IDENTITY + AI
+    tier: flagship
+    summary: A personalized identity terminal shaped through a live AI conversation.
+    outcome: Replace the generic portfolio page with an experience that adapts to the visitor's intent.
+    capabilities: [CONVERSATIONAL UI, PERSONALIZATION, AI WORKFLOWS]
+    public_url: https://my.alexanderjgill.com
+    homepage_hosts: [my.alexanderjgill.com]
+    accent: "#A78BFA"
+
+  - repo: Slapshot-Snapshot
+    name: Slapshot Snapshot
+    domain: MEDIA
+    tier: lab
+    summary: A focused home for team photos and videos.
+    outcome: Keep the moments that matter organized, easy to find, and easy to share.
+    capabilities: [TEAM MEDIA, FAST SHARING, SIMPLE ARCHIVE]
+    public_url: https://snap.pucc.us
+    homepage_hosts: [snap.pucc.us]
+    accent: "#60A5FA"
+
+  - repo: parcel-tracker
+    name: Parcel Tracker
+    domain: LOGISTICS
+    tier: lab
+    summary: Secure shipment tracking across desktop and mobile.
+    outcome: Pull fragmented delivery information into one dependable operational view.
+    capabilities: [MULTI-CARRIER, SECURE ACCESS, MOBILE READY]
+    public_url: https://tb4.alexander.quest
+    homepage_hosts: [tb4.alexander.quest]
+    accent: "#F5B942"
+
+  - repo: feedabum
+    name: Feed a Bum
+    domain: COMMUNITY
+    tier: lab
+    summary: Hyperlocal micro-giving for verified neighbors.
+    outcome: Scan, verify, and donate in under a minute with a transparent path from intent to impact.
+    capabilities: [VERIFIED RECIPIENTS, SECURE PAYMENTS, QR ACCESS]
+    public_url: https://fab.gops.app
+    homepage_hosts: [fab.gops.app]
+    accent: "#FB923C"
+
+stack:
+  - name: BUILD
+    items: [vue, vite, typescript, javascript, php, lua]
+  - name: OPERATE
+    items: [linux, ubuntu, docker, apache, ssl-tls, hosting]
+  - name: DATA
+    items: [postgresql, mysql, phpmyadmin, phppgadmin]
+  - name: ACCELERATE
+    items: [codex, git, vscode, wordpress, domains, cpanel, roblox-studio]
+
+principles:
+  - title: SHIP THE WHOLE SYSTEM
+    body: Product, infrastructure, deployment, and operations belong in the same conversation.
+  - title: MAKE COMPLEXITY FEEL CALM
+    body: Good software turns difficult workflows into clear next steps.
+  - title: OPERATE WHAT YOU SHIP
+    body: Reliability, security, and maintainability are product features.

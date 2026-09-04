@@ -45,7 +45,7 @@ class ActivityGraphTest(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("python3 scripts/generate_activity_graph.py", workflow)
+        self.assertIn("python3 scripts/generate_telemetry.py", workflow)
         self.assertNotIn("github-readme-activity-graph.vercel.app", workflow)
 
 

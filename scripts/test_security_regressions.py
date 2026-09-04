@@ -97,5 +97,35 @@ class WorkflowSecurityPolicyTest(unittest.TestCase):
         self.assertNotIn("GITHUB_REF_NAME", workflow)
 
 
+class FeaturedSourcePolicyTest(unittest.TestCase):
+    def test_private_repository_does_not_get_public_source_link(self) -> None:
+        projects = [
+            {
+                "repo": "PrivateProduct",
+                "name": "Private Product",
+                "domain": "TEST",
+                "tier": "flagship",
+                "summary": "Summary",
+                "outcome": "Outcome",
+                "capabilities": ["TESTING"],
+                "public_url": "https://product.example",
+                "homepage_hosts": ["product.example"],
+                "accent": "#8CCAAF",
+            }
+        ]
+
+        with patch.object(featured, "FEATURED_PROJECTS", projects), patch.object(
+            featured,
+            "api_get",
+            return_value={
+                "private": True,
+                "html_url": "https://github.com/agillhock7/PrivateProduct",
+            },
+        ):
+            [project] = featured.build_project_data()
+
+        self.assertEqual("", project["source_url"])
+
+
 if __name__ == "__main__":
     unittest.main()

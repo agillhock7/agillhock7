@@ -1,4 +1,4 @@
-name: Update Profile Cards
+name: Update Forward Lab Profile
 
 on:
   workflow_dispatch:
@@ -7,7 +7,12 @@ on:
       - main
       - master
     paths:
+      - "profile.yml"
+      - "requirements-*.txt"
       - ".github/workflows/update-profile-cards.yml"
+      - ".github/workflows/refresh-project-previews.yml"
+      - "scripts/test_*.py"
+      - "scripts/profile_config.py"
       - "scripts/generate_stats_card.py"
       - "scripts/generate_header.py"
       - "scripts/generate_tech_badges.py"
@@ -15,16 +20,23 @@ on:
       - "scripts/generate_top_languages_card.py"
       - "scripts/generate_streak_card.py"
       - "scripts/generate_activity_graph.py"
+      - "scripts/generate_ecosystem.py"
+      - "scripts/generate_telemetry.py"
       - "scripts/update_readme_cache_bust.py"
   schedule:
-    - cron: "17 * * * *"
+    - cron: "17 7 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: profile-readme-writes
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       TARGET_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
@@ -37,16 +49,23 @@ jobs:
         run: mkdir -p assets
 
       - name: Install Python dependencies
-        run: python3 -m pip install --user pillow
+        run: python3 -m pip install --user -r requirements-test.txt
+
+      - name: Run profile regression suite
+        run: |
+          python3 -m unittest discover -s scripts -p "test_*.py"
+          python3 -m py_compile scripts/*.py
 
       - name: Generate header
+        if: github.event_name != 'schedule'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: agillhock7
-          HEADER_HEIGHT: "240"
+          HEADER_HEIGHT: "340"
         run: python3 scripts/generate_header.py
 
       - name: Generate tech stack badges
+        if: github.event_name != 'schedule'
         run: python3 scripts/generate_tech_badges.py
 
       - name: Generate featured project content
@@ -55,30 +74,16 @@ jobs:
           GITHUB_USER: agillhock7
         run: python3 scripts/generate_featured_content.py
 
-      - name: Generate stats card
+      - name: Generate product constellation
+        if: github.event_name != 'schedule'
+        run: python3 scripts/generate_ecosystem.py
+
+      - name: Generate live telemetry
         env:
           GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USER: agillhock7
           PRIVATE_REPO_COUNT: ${{ secrets.PRIVATE_REPO_COUNT }}
-        run: python3 scripts/generate_stats_card.py
-
-      - name: Generate top languages card
-        env:
-          GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GITHUB_USER: agillhock7
-        run: python3 scripts/generate_top_languages_card.py
-
-      - name: Generate streak card
-        env:
-          GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GITHUB_USER: agillhock7
-        run: python3 scripts/generate_streak_card.py
-
-      - name: Generate activity graph
-        env:
-          GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GITHUB_USER: agillhock7
-        run: python3 scripts/generate_activity_graph.py
+        run: python3 scripts/generate_telemetry.py
 
       - name: Update README cache bust query params
         run: python3 scripts/update_readme_cache_bust.py
@@ -95,6 +100,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: update profile cards"
+          git commit -m "chore: refresh Forward Lab profile"
           git pull --rebase origin "${TARGET_BRANCH}"
           git push origin "HEAD:${TARGET_BRANCH}"

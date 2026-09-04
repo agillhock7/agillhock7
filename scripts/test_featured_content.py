@@ -7,11 +7,15 @@ import struct
 import sys
 import unittest
 import zlib
+from io import BytesIO
 from pathlib import Path
+
+from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+from scripts import capture_project_previews as previews  # noqa: E402
 from scripts import generate_featured_content as featured  # noqa: E402
 
 
@@ -63,14 +67,13 @@ def rgba_pixels(image_bytes: bytes) -> tuple[int, int, bytes]:
 
 class PreviewThumbnailTest(unittest.TestCase):
     def test_rounds_preview_png_corners_with_transparency(self) -> None:
-        rounded = featured.round_preview_corners(solid_rgb_png(8, 8, (10, 20, 30)), radius=3)
+        rounded = previews.round_preview_corners(solid_rgb_png(8, 8, (10, 20, 30)), radius=3)
 
-        width, height, pixels = rgba_pixels(rounded)
-
-        self.assertEqual((8, 8), (width, height))
-        self.assertEqual(0, pixels[3])
-        center_index = ((height // 2) * width + (width // 2)) * 4
-        self.assertEqual(bytes((10, 20, 30, 255)), pixels[center_index : center_index + 4])
+        with Image.open(BytesIO(rounded)) as image:
+            pixels = image.convert("RGBA")
+            self.assertEqual((8, 8), pixels.size)
+            self.assertEqual(0, pixels.getpixel((0, 0))[3])
+            self.assertEqual((10, 20, 30, 255), pixels.getpixel((4, 4)))
 
 
 if __name__ == "__main__":
