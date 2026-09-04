@@ -75,9 +75,8 @@ def capture_project(page: Any, project: dict[str, Any]) -> bool:
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=45_000)
         page.wait_for_timeout(3_500)
-        page.add_style_tag(
-            content="*,*::before,*::after{animation:none!important;transition:none!important;}"
-        )
+        # Reduced motion is set at the browser-context level. Avoid injecting
+        # inline CSS here: production sites with a strict CSP correctly reject it.
         image_bytes = page.screenshot(type="png", full_page=False)
         if is_washed_preview(image_bytes):
             print(

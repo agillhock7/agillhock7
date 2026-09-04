@@ -154,6 +154,14 @@ class WorkflowTest(unittest.TestCase):
         self.assertNotIn("thum.io", update + previews)
         self.assertNotIn("s.wordpress.com/mshots", update + previews)
 
+    def test_preview_capture_respects_strict_content_security_policies(self) -> None:
+        capture = (REPO_ROOT / "scripts/capture_project_previews.py").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn('reduced_motion="reduce"', capture)
+        self.assertNotIn("add_style_tag", capture)
+
 
 if __name__ == "__main__":
     unittest.main()
