@@ -68,6 +68,21 @@ def round_preview_corners(
         return output.getvalue()
 
 
+def disable_page_motion(page: Any, name: str) -> bool:
+    """Freeze CSS motion when permitted without making CSP a capture failure."""
+    try:
+        page.add_style_tag(
+            content="*,*::before,*::after{animation:none!important;transition:none!important;}"
+        )
+        return True
+    except Exception as err:
+        print(
+            f"[previews] {name} blocks injected styles; capturing with native reduced motion: {err}",
+            file=sys.stderr,
+        )
+        return False
+
+
 def capture_project(page: Any, project: dict[str, Any]) -> bool:
     name = str(project["name"])
     url = str(project["public_url"])
@@ -75,8 +90,7 @@ def capture_project(page: Any, project: dict[str, Any]) -> bool:
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=45_000)
         page.wait_for_timeout(3_500)
-        # Reduced motion is set at the browser-context level. Avoid injecting
-        # inline CSS here: production sites with a strict CSP correctly reject it.
+        disable_page_motion(page, name)
         image_bytes = page.screenshot(type="png", full_page=False)
         if is_washed_preview(image_bytes):
             print(

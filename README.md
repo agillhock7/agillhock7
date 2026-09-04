@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://AlexanderJGill.com" aria-label="Visit AlexanderJGill.com">
-    <img src="assets/header.svg?v=80188f06ab36" alt="Alexander Gill — The Forward Lab. I build calm systems for messy real-world work." width="100%" />
+    <img src="assets/header.svg?v=5943c6659419" alt="Alexander Gill — The Forward Lab. I build calm systems for messy real-world work." width="100%" />
   </a>
 </p>
 

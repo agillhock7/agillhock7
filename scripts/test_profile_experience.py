@@ -18,6 +18,7 @@ from scripts import generate_ecosystem as ecosystem  # noqa: E402
 from scripts import generate_header as header  # noqa: E402
 from scripts import generate_telemetry as telemetry  # noqa: E402
 from scripts import update_readme_cache_bust as cache_bust  # noqa: E402
+from scripts.capture_project_previews import disable_page_motion  # noqa: E402
 from scripts.generate_streak_card import Streak  # noqa: E402
 from scripts.profile_config import load_profile, validate_profile  # noqa: E402
 
@@ -154,13 +155,18 @@ class WorkflowTest(unittest.TestCase):
         self.assertNotIn("thum.io", update + previews)
         self.assertNotIn("s.wordpress.com/mshots", update + previews)
 
-    def test_preview_capture_respects_strict_content_security_policies(self) -> None:
+    def test_preview_capture_falls_back_under_strict_content_security_policy(self) -> None:
+        class StrictCspPage:
+            def add_style_tag(self, **_kwargs: object) -> None:
+                raise RuntimeError("style-src 'self'")
+
+        self.assertFalse(disable_page_motion(StrictCspPage(), "Strict App"))
+
         capture = (REPO_ROOT / "scripts/capture_project_previews.py").read_text(
             encoding="utf-8"
         )
 
         self.assertIn('reduced_motion="reduce"', capture)
-        self.assertNotIn("add_style_tag", capture)
 
 
 if __name__ == "__main__":

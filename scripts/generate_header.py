@@ -86,8 +86,8 @@ def build_svg(brand: dict[str, Any]) -> str:
       <rect width="172" height="34" rx="17" fill="#102B25" stroke="#2D5A4E" />
       <circle cx="19" cy="17" r="5" fill="#22C55E" filter="url(#glow)" />
       <text x="34" y="22" fill="#D9FFF0" font-size="11" font-weight="700" letter-spacing="1">06 LIVE SYSTEMS</text>
-      <rect x="184" width="218" height="34" rx="17" fill="#0D2025" stroke="#24495B" />
-      <text x="293" y="22" text-anchor="middle" fill="#BCEBFF" font-size="11" font-weight="700" letter-spacing="1">BUILT + OPERATED END TO END</text>
+      <rect x="184" width="248" height="34" rx="17" fill="#0D2025" stroke="#24495B" />
+      <text x="308" y="22" text-anchor="middle" fill="#BCEBFF" font-size="11" font-weight="700" letter-spacing="1">BUILT + OPERATED END TO END</text>
     </g>
   </g>
 
@@ -122,7 +122,7 @@ def build_svg(brand: dict[str, Any]) -> str:
       <text x="758" y="109" text-anchor="middle" fill="#91AEC8">MEDIA</text>
     </g>
   </g>
-  <rect class="cursor" x="464" y="286" width="8" height="16" rx="1" fill="#8CCAAF" opacity="0.85" />
+  <rect class="cursor" x="496" y="286" width="8" height="16" rx="1" fill="#8CCAAF" opacity="0.85" />
 </svg>
 """
 
