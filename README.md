@@ -42,7 +42,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=48b29eb26c75" alt="EveryMile production preview" width="100%" /></a>
+      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=32c6948d2f3f" alt="EveryMile production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>MOVEMENT // FLAGSHIP SYSTEM</strong></sub>
@@ -55,7 +55,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=a8a5f9dee14d" alt="MySite production preview" width="100%" /></a>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=495e75174e86" alt="MySite production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>IDENTITY + AI // FLAGSHIP SYSTEM</strong></sub>
