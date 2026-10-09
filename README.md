@@ -109,7 +109,7 @@
 ## Live telemetry
 
 <p align="center">
-  <img src="assets/telemetry.svg?v=8908c2900116" alt="Live GitHub telemetry including repositories, shipped systems, contributions, streaks, and languages." width="100%" />
+  <img src="assets/telemetry.svg?v=f519240cf2fc" alt="Live GitHub telemetry including repositories, shipped systems, contributions, streaks, and languages." width="100%" />
 </p>
 
 <details>
