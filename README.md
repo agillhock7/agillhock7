@@ -42,7 +42,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=d483341ac736" alt="EveryMile production preview" width="100%" /></a>
+      <a href="https://em.gops.app"><img src="assets/previews/everymile.png?v=ef56acf16552" alt="EveryMile production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>MOVEMENT // FLAGSHIP SYSTEM</strong></sub>
