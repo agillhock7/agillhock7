@@ -55,7 +55,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=ff009e1710e6" alt="MySite production preview" width="100%" /></a>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=fcf82bc38e32" alt="MySite production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>IDENTITY + AI // FLAGSHIP SYSTEM</strong></sub>
