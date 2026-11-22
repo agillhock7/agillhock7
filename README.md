@@ -29,7 +29,7 @@
   <tbody>
   <tr>
     <td width="54%">
-      <a href="https://onledge.gops.app"><img src="assets/previews/onledge.png?v=c9fda9088943" alt="OnLedge production preview" width="100%" /></a>
+      <a href="https://onledge.gops.app"><img src="assets/previews/onledge.png?v=39f72e99c6a9" alt="OnLedge production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>MONEY // FLAGSHIP SYSTEM</strong></sub>
@@ -55,7 +55,7 @@
   </tr>
   <tr>
     <td width="54%">
-      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=ff009e1710e6" alt="MySite production preview" width="100%" /></a>
+      <a href="https://my.alexanderjgill.com"><img src="assets/previews/mysite.png?v=f6093c9b9d48" alt="MySite production preview" width="100%" /></a>
     </td>
     <td width="46%" valign="top">
       <sub><strong>IDENTITY + AI // FLAGSHIP SYSTEM</strong></sub>
